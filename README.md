@@ -1,7 +1,9 @@
 # FITROUTINE  
 Proyecto enfocado a la generación de rutinas para personas principiantes y/o avanzadas para mantener un régimen de ejercicio.
-Link del prototipo en Figma: 
-Integrantes del equipo
+
+**Link del prototipo en Figma:** [FITOURINE](https://www.figma.com/design/iaEpbRiCy3g22NkQd2RBSm/Proyecto-y-Aplicacion-Editable?node-id=0-1&t=9Fa0pGguQDwxwcyJ-1)
+
+**Integrantes del Equipo:**
 - Camilo Rojas
 - Robin Vásquez
 - Benjamín Urrea
