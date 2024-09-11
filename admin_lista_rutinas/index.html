@@ -52,7 +52,55 @@
         <div class="admin-rutina-header">
           <h2>Rutinas</h2>
         </div>
-        <div class="routine-info"></div>
+        <div class="routine-info">
+          <table>
+            <thead>
+              <tr>
+                <th>Nombre</th>
+                <th>Descripción</th>
+                <th>Acciones</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Rutina 1</td>
+                <td>Descripción Rutina 1</td>
+                <td>
+                  <button
+                    onclick="window.location.href='/admin-editar-rutina'"
+                    class="edit-btn"
+                  >
+                    Editar</button
+                  ><button class="delete-btn">Eliminar</button>
+                </td>
+              </tr>
+              <tr>
+                <td>Rutina 2</td>
+                <td>Descripción Rutina 2</td>
+                <td>
+                  <button
+                    onclick="window.location.href='/admin-editar-rutina'"
+                    class="edit-btn"
+                  >
+                    Editar</button
+                  ><button class="delete-btn">Eliminar</button>
+                </td>
+              </tr>
+              <tr>
+                <td>Rutina 3</td>
+                <td>Descripción Rutina 3</td>
+                <td>
+                  <button
+                    onclick="window.location.href='/admin-editar-rutina'"
+                    class="edit-btn"
+                  >
+                    Editar</button
+                  ><button class="delete-btn">Eliminar</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
         <button
           class="add-routine-btn"
           onclick="location.href='/admin-agregar-rutina'"
