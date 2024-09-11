@@ -1,7 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;700&display=swap");
 
-/*Estilo general para body y página, con colores bases*/
-
 :root {
   --base-clr: #0f1017;
   --hover-clr: #585858;
@@ -34,13 +32,11 @@ body {
     "main";
 }
 
-/*Estilo de Navbar*/
-
 #navbar {
   background-color: var(--secondary-base-clr);
   box-sizing: border-box;
   padding: 5px 1em;
-  height: 136px;
+  height: 100px;
   align-self: stretch;
   justify-content: space-between;
   position: sticky;
@@ -49,6 +45,7 @@ body {
   overflow: hidden;
   text-wrap: nowrap;
 }
+
 .nav-center {
   display: flex;
   justify-content: center;
@@ -93,47 +90,6 @@ body {
 
 #navbar a:hover,
 #navbar .dropdown-btn:hover {
-  background-color: var(--hover-clr);
-}
-#navbar .sub-menu {
-  float: left;
-  display: grid;
-  grid-template-rows: 0fr;
-  transition: 300ms ease-in-out;
-  > div {
-    overflow: hidden;
-  }
-}
-
-#navbar .sub-menu.show {
-  grid-template-rows: 1fr;
-}
-.dropdown-btn svg {
-  transition: 200ms ease;
-}
-
-.rotate svg:last-child {
-  rotate: 180deg;
-}
-
-#sidebar .sub-menu a {
-  padding-left: 2em;
-}
-
-#toggle-btn {
-  margin-left: auto;
-  padding: 1em;
-  border: none;
-  border-radius: 0.5em;
-  background: none;
-  cursor: pointer;
-
-  svg {
-    transition: rotate 150ms ease;
-  }
-}
-
-#toggle-btn:hover {
   background-color: var(--hover-clr);
 }
 
