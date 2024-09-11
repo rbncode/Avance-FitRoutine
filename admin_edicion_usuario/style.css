@@ -30,3 +30,38 @@ main {
     flex-grow: 1;
     margin-top: 60px;
 }
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    font-weight: lighter;
+
+}
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+    color: #fff;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    text-align: center;
+    margin-left: -100px;
+
+}
+
+.menu-dashboard {
+    width: 250px;
+    height: calc(100vh - 60px);
+    background: #0D0E16;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    border-right: 2px solid #ffffff;
+    position: fixed;
+    top: 60px;
+    left: 0;
+}
+
