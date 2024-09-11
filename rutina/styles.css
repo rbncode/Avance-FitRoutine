@@ -31,3 +31,17 @@ body {
     "navbar"
     "main";
 }
+
+#navbar {
+  background-color: var(--secondary-base-clr);
+  box-sizing: border-box;
+  padding: 5px 1em;
+  height: 100px;
+  align-self: stretch;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  transition: 300ms ease-in-out;
+  overflow: hidden;
+  text-wrap: nowrap;
+}
