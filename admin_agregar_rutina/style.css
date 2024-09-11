@@ -169,3 +169,136 @@ li {
   align-items: center;
   justify-content: center;
 }
+
+form {
+  background-color: #ffffff;
+  color: #000000;
+  border-radius: 12px;
+  padding: 4%;
+  width: 1096px;
+  height: 1000px;
+  height: auto;
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-header {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: left;
+  display: flex;
+  justify-content: left;
+}
+
+.form-row {
+  display: flex;
+  gap: 15px;
+  flex-direction: row;
+}
+
+.form-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-col label {
+  margin-top: 5px;
+  padding: 5px;
+}
+
+form select {
+  padding: 10px;
+  border-radius: 5px;
+  margin: 10px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  width: 200px;
+}
+
+form input {
+  width: 560px;
+  flex: 1;
+  background-color: #d9d9d9;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  font-size: 16px;
+}
+
+.add-routine {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.routine-info {
+  flex: 1 0 auto;
+}
+
+.routine-exercises {
+  display: flex;
+  justify-content: left;
+  margin-left: 30px auto;
+  padding: 20px;
+}
+
+.exercise-overview {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+.changes-container {
+  display: flex;
+  justify-content: end;
+}
+
+.cancel-btn,
+.save-btn {
+  padding: 10px;
+  margin: 10px;
+  font-size: 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 140px;
+}
+
+form .add-exercise {
+  justify-content: flex-end;
+  border-radius: 10px;
+  background: #0d0e16;
+  color: #fff;
+  width: 150px;
+  height: 40px;
+  border: none;
+  padding: 5px 21px;
+  margin: 5px;
+  flex-shrink: 0;
+}
+
+.delete-btn {
+  background-color: white;
+  align-items: center;
+  border: none;
+  font-size: 30px;
+}
+
+.save-btn {
+  background-color: #d32f2f;
+  color: #fff;
+}
+
+.save-btn:hover {
+  background-color: #b71c1c;
+}
+
+.cancel-btn {
+  background-color: #e0e0e0;
+  color: #000;
+}
+
+.cancel-btn:hover {
+  background-color: #bdbdbd;
+}
