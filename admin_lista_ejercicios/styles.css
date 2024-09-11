@@ -189,6 +189,9 @@ h1 {
     border-bottom: 1px solid #ccc;
 }
 
+.centrar{
+    padding-left: 50px;
+}
 
 .btn {
     border: none;
