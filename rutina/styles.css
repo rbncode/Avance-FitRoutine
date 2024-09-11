@@ -82,3 +82,17 @@ body {
   font: inherit;
   cursor: pointer;
 }
+
+#navbar a span,
+#navbar .dropdown-btn {
+  flex-grow: 1;
+}
+
+#navbar a:hover,
+#navbar .dropdown-btn:hover {
+  background-color: var(--hover-clr);
+}
+
+#sidebar .sub-menu a {
+  padding-left: 2em;
+}
