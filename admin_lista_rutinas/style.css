@@ -226,6 +226,34 @@ li {
   margin: 30px auto;
 }
 
+.add-routine-btn {
+  display: flex;
+  width: 180px;
+  height: 40px;
+  padding: 20px 21px;
+  margin: 20px;
+  justify-content: center;
+  background: #ad283d;
+  border: none;
+  color: #fff;
+  font-weight: 400;
+  align-items: center;
+  gap: 10px;
+  border-radius: 10px;
+  flex-shrink: 0;
+}
+
+.edit-btn,
+.delete-btn {
+  padding: 10px;
+  margin: 10px;
+  font-size: 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 140px;
+}
+
 table {
   background-color: #fff;
   color: #000;
@@ -239,4 +267,27 @@ td {
   padding: 10px;
   margin: auto 20px;
   text-align: center;
+}
+
+.delete-btn {
+  background-color: none;
+  border: none;
+}
+
+.save-btn {
+  background-color: #d32f2f;
+  color: #fff;
+}
+
+.save-btn:hover {
+  background-color: #b71c1c;
+}
+
+.cancel-btn {
+  background-color: #e0e0e0;
+  color: #000;
+}
+
+.cancel-btn:hover {
+  background-color: #bdbdbd;
 }
