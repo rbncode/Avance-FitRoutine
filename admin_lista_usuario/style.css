@@ -16,3 +16,20 @@ body {
     margin: 0;
 }
 
+header {
+    width: 100%;
+    background-color: #2D2D2D;
+    padding: 14px;
+    margin-top: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+main {
+    display: flex;
+    flex-grow: 1;
+    margin-top: 60px;
+}
+
