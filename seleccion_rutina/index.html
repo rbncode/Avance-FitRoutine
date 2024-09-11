@@ -7,27 +7,28 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <nav id="navbar">
-      <div class="nav-container">
+    <nav class="navbar">
+      <div class="logo">
         <h1>FitRoutine</h1>
       </div>
-      <div class="nav-center">
-        <a href="/principal">
-          <span>Inicio</span>
-        </a>
-        <a href="/rutina">
-          <span>Rutinas</span>
-        </a>
-        <div class="ejercicios">
-          <button onclick="toggleSubMenu(this)" class="dropdown-btn">
-            <span>Ejercicios</span>
-          </button>
-        </div>
-        <a href="/perfil">Perfil</a>
-        <div class="log-out">
-          <button class="logout-btn">Cerrar Sesión</button>
-        </div>
-      </div>
+      <ul class="nav-links">
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#">Perfil</a></li>
+        <li><a href="#">Rutinas</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle">Ejercicios</a>
+          <ul class="dropdown-menu">
+            <li>
+              <a href="../lista_tren_superior/index.html">Tren Superior</a>
+            </li>
+            <li>
+              <a href="../lista_tren_inferior/index.html">Tren Inferior</a>
+            </li>
+            <li><a href="../lista_core/index.html">Core</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Cerrar Sesion</a></li>
+      </ul>
     </nav>
 
     <main>
