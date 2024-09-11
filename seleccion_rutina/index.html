@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav id="navbar">
+      <div class="nav-container">
+        <h1>FitRoutine</h1>
+      </div>
+      <div class="nav-center">
+        <a href="/principal">
+          <span>Inicio</span>
+        </a>
+        <a href="/rutina">
+          <span>Rutinas</span>
+        </a>
+        <div class="ejercicios">
+          <button onclick="toggleSubMenu(this)" class="dropdown-btn">
+            <span>Ejercicios</span>
+          </button>
+        </div>
+        <a href="/perfil">Perfil</a>
+        <div class="log-out">
+          <button class="logout-btn">Cerrar Sesión</button>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <div class="container-header">
+        <div class="volver-boton">
+          <button onclick="history.back()" class="volver-btn">Volver</button>
+        </div>
+        <div class="rutina-header">Selección de Rutinas</div>
+      </div>
+
+      <div class="busqueda-container">
+        <div class="form-container">
+          <div class="vertical-form">
+            <label for="level">Seleccione su nivel:</label>
+            <select id="level" name="level">
+              <option value="" disabled selected hidden>Nivel</option>
+              <option value="easy">Fácil</option>
+              <option value="intermediate">Intermedio</option>
+              <option value="difficult">Difícil</option>
+            </select>
+          </div>
+
+          <div class="vertical-form">
+            <label for="muscle-group">Seleccione sector muscular:</label>
+            <select id="muscle-group" name="muscle-group">
+              <option value="" disabled selected hidden>Sector muscular</option>
+              <option value="t.superior">T. Superior</option>
+              <option value="core">Core</option>
+              <option value="t.inferior">T. Inferior</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="resultados">
+          <div class="resultado-rutina">
+            <h1 class="nombre-rutina">Rutina de piernas</h1>
+            <button
+              onclick="window.location.href='/ver-rutina'"
+              class="see-more"
+            >
+              Ver más
+            </button>
+            <button class="guardar">Guardar</button>
+          </div>
+          <div class="resultado-rutina">
+            <h1 class="nombre-rutina">Rutina de piernas</h1>
+            <button
+              onclick="window.location.href='/ver-rutina'"
+              class="see-more"
+            >
+              Ver más
+            </button>
+            <button class="guardar">Guardar</button>
+          </div>
+          <div class="resultado-rutina">
+            <h1 class="nombre-rutina">Rutina de piernas</h1>
+            <button
+              onclick="window.location.href='/ver-rutina'"
+              class="see-more"
+            >
+              Ver más
+            </button>
+            <button class="guardar">Guardar</button>
+          </div>
+        </div>
+
+        <div class="coach-virtual">
+          <h3>¿No sabes qué elegir? ¡Pregúntale a nuestro Coach Virtual!</h3>
+          <button class="consultar-btn">Consultar</button>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <nav id="navbar">
+      <div class="nav-container">
+        <h1>FitRoutine</h1>
+      </div>
+      <div class="nav-center">
+        <a href="/principal">
+          <span>Inicio</span>
+        </a>
+        <a href="/rutina">
+          <span>Rutinas</span>
+        </a>
+        <div class="ejercicios">
+          <button onclick="toggleSubMenu(this)" class="dropdown-btn">
+            <span>Ejercicios</span>
+          </button>
+        </div>
+        <a href="/perfil">Perfil</a>
+        <div class="log-out">
+          <button class="logout-btn">Cerrar Sesión</button>
+        </div>
+      </div>
+    </nav>
+
+    <main></main>
+        <div class="volver">
+            <button class="volver-btn" onclick="history.back()" id="back-button">Volver</button>
+        </div>
+        <h1>RUTINAS</h1>
+        <h2>Nombre de Rutina</h2>
+        <div class="info-rutina">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Ejercicio</th>
+                        <th>Peso</th>
+                        <th>Repeticiones</th>
+                        <th>Series</th>
+                        <th>Descanso</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Sentadilla</td>
+                        <td>100 Kg</td>
+                        <td>15 reps</td>
+                        <td>3</td>
+                        <td>2 min 30 segs</td>
+                    </tr>
+                    <tr>
+                        <td>Sentadilla</td>
+                        <td>100 Kg</td>
+                        <td>15 reps</td>
+                        <td>3</td>
+                        <td>2 min 30 segs</td>
+                    </tr>
+                    <tr>
+                        <td>Sentadilla</td>
+                        <td>100 Kg</td>
+                        <td>15 reps</td>
+                        <td>3</td>
+                        <td>2 min 30 segs</td>
+                    </tr>
+                    </tbody>
+            </table>
+        </div>
+      </main>
+  </body>
+</html>
