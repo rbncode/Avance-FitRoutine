@@ -102,3 +102,52 @@ body {
   height: 52px;
   flex-shrink: 0;
 }
+
+/*CSS para ver la rutina*/
+
+.info-rutina {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.volver-btn {
+  display: flex;
+  width: 105px;
+  height: 40px;
+  padding: 5px 21px;
+  justify-content: center;
+  align-items: center;
+  background: #ad283d;
+  border: none;
+  color: #fff;
+  padding: 5px;
+  font-weight: 400;
+  align-items: center;
+  gap: 10px;
+  border-radius: 10px;
+  flex-shrink: 0;
+}
+
+.info-rutina table {
+  border-radius: 10px;
+  width: 50%;
+  margin: 0 auto;
+  height: 20%;
+}
+
+.info-rutina th {
+  background-color: #ad283d;
+  color: white;
+  padding: 10px;
+  text-align: left;
+  border: none;
+}
+
+.info-rutina td {
+  padding: 10px;
+  background-color: white;
+  border: none;
+  color: #000;
+  text-align: left;
+}
