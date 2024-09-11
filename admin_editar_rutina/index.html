@@ -46,5 +46,93 @@
         </li>
       </ul>
     </nav>
+
+    <div class="container">
+      <div class="form-header">
+        <h2>Editar Rutina</h2>
+      </div>
+      <form>
+        <div class="add-routine">
+          <div class="routine-info">
+            <div class="form-col">
+              <label for="">Nombre</label>
+              <input
+                type="text"
+                name="nombre-rutina"
+                id=""
+                placeholder="Editar nombre de Rutina"
+              />
+            </div>
+            <div class="form-col">
+              <label for="">Descripción</label>
+              <input
+                type="text"
+                name="descripcion-rutina"
+                id=""
+                placeholder="Editar descripción"
+              />
+            </div>
+            <div class="form-col"><label for="">Ejercicios</label></div>
+            <div class="form-row">
+              <select
+                class="cat-ejercicios"
+                name="categoria-ejercicios"
+                id="categoria-ejercicios"
+              >
+                <option value="" disabled selected hidden>Categoría</option>
+                <option value="">T. Superior</option>
+                <option value="">Core</option>
+                <option value="">T. Inferior</option>
+              </select>
+
+              <select
+                class="exercises-selection"
+                name="ejercicios-eleccion"
+                id="ejercicios-eleccion"
+              >
+                <option value="" disabled selected hidden>
+                  Seleccionar Ejercicios
+                </option>
+                <option value="">Ejercicio 1</option>
+                <option value="">Ejercicio 2</option>
+                <option value="">Ejercicio 3</option>
+                <option value="">Ejercicio 4</option>
+              </select>
+            </div>
+            <button class="add-exercise" type="submit">Añadir Ejercicio</button>
+          </div>
+          <div class="form-col">
+            <div class="routine-exercises">
+              <ul>
+                <li>
+                  <div class="exercise-overview">
+                    Ejercicio 1
+                    <button class="delete-btn" alt="delete">
+                      <i class="bx bx-trash"></i>
+                    </button>
+                  </div>
+                </li>
+                <li>
+                  <div class="exercise-overview">
+                    Ejercicio 2
+                    <button class="delete-btn" alt="delete">
+                      <i class="bx bx-trash"></i>
+                    </button>
+                  </div>
+                </li>
+                <li>
+                  <div class="exercise-overview">
+                    Ejercicio 3
+                    <button class="delete-btn" alt="delete">
+                      <i class="bx bx-trash"></i>
+                    </button>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
   </body>
 </html>
