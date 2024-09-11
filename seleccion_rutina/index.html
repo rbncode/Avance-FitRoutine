@@ -37,50 +37,67 @@
         <div class="rutina-header">Selección de Rutinas</div>
       </div>
 
-      <div class="busqueda-container"></div>
+      <div class="busqueda-container">
         <div class="form-container">
-            <div class="vertical-form">
-              <label for="level">Seleccione su nivel:</label>
+          <div class="vertical-form">
+            <label for="level">Seleccione su nivel:</label>
             <select id="level" name="level">
               <option value="" disabled selected hidden>Nivel</option>
               <option value="easy">Fácil</option>
               <option value="intermediate">Intermedio</option>
               <option value="difficult">Difícil</option>
             </select>
-            </div>
-
-            <div class="vertical-form">
-              <label for="muscle-group">Seleccione sector muscular:</label>
-              <select id="muscle-group" name="muscle-group">
-                <option value="" disabled selected hidden>
-                  Sector muscular
-                </option>
-                <option value="t.superior">T. Superior</option>
-                <option value="core">Core</option>
-                <option value="t.inferior">T. Inferior</option>
-              </select>
-            </div>
           </div>
 
-          <div class="resultados">
-            <div class="resultado-rutina">
-              <h1 class="nombre-rutina">Rutina de piernas</h1>
-              <button onclick="window.location.href='/ver-rutina'" class="see-more">Ver más</button>
-              <button class="guardar">Guardar</button>
-            </div>
-            <div class="resultado-rutina">
-              <h1 class="nombre-rutina">Rutina de piernas</h1>
-              <button onclick="window.location.href='/ver-rutina'" class="see-more">Ver más</button>
-              <button class="guardar">Guardar</button>
-            </div>
-            <div class="resultado-rutina">
-              <h1 class="nombre-rutina">Rutina de piernas</h1>
-              <button onclick="window.location.href='/ver-rutina'" class="see-more">Ver más</button>
-              <button class="guardar">Guardar</button>
-            </div>
+          <div class="vertical-form">
+            <label for="muscle-group">Seleccione sector muscular:</label>
+            <select id="muscle-group" name="muscle-group">
+              <option value="" disabled selected hidden>Sector muscular</option>
+              <option value="t.superior">T. Superior</option>
+              <option value="core">Core</option>
+              <option value="t.inferior">T. Inferior</option>
+            </select>
           </div>
-          
         </div>
+
+        <div class="resultados">
+          <div class="resultado-rutina">
+            <h1 class="nombre-rutina">Rutina de piernas</h1>
+            <button
+              onclick="window.location.href='/ver-rutina'"
+              class="see-more"
+            >
+              Ver más
+            </button>
+            <button class="guardar">Guardar</button>
+          </div>
+          <div class="resultado-rutina">
+            <h1 class="nombre-rutina">Rutina de piernas</h1>
+            <button
+              onclick="window.location.href='/ver-rutina'"
+              class="see-more"
+            >
+              Ver más
+            </button>
+            <button class="guardar">Guardar</button>
+          </div>
+          <div class="resultado-rutina">
+            <h1 class="nombre-rutina">Rutina de piernas</h1>
+            <button
+              onclick="window.location.href='/ver-rutina'"
+              class="see-more"
+            >
+              Ver más
+            </button>
+            <button class="guardar">Guardar</button>
+          </div>
+        </div>
+
+        <div class="coach-virtual">
+          <h3>¿No sabes qué elegir? ¡Pregúntale a nuestro Coach Virtual!</h3>
+          <button class="consultar-btn">Consultar</button>
+        </div>
+      </div>
     </main>
   </body>
 </html>
