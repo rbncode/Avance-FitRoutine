@@ -45,3 +45,20 @@ body {
   overflow: hidden;
   text-wrap: nowrap;
 }
+
+.nav-center {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 16px;
+  padding: 10px;
+}
+#navbar .nav-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+#navbar .log-out {
+  align-items: center;
+}
