@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #ffffff;
+    background: #0D0E16;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0;
+}
+
+header {
+    width: 100%;
+    background-color: #2D2D2D;
+    padding: 14px;
+    margin-top: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+main {
+    display: flex;
+    flex-grow: 1;
+    margin-top: 60px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    font-weight: lighter;
+
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+    color: #fff;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    text-align: center;
+    margin-left: -100px;
+
+}
+
+.menu-dashboard {
+    width: 250px;
+    height: calc(100vh - 60px);
+    background: #0D0E16;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    border-right: 2px solid #ffffff;
+    position: fixed;
+    top: 60px;
+    left: 0;
+}
+
+
+.top-menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 20px;
+
+}
+
+.icono i {
+    font-size: 80px;
+    color: #fff;
+}
+
+.admin-name {
+    font-size: 18px;
+    color: #fff;
+    margin-top: 10px;
+}
+
+.admin-email {
+    font-size: 14px;
+    color: #b0b0b0;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex-grow: 1;
+    margin-top: 0px;
+}
+
+.enlace {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.enlace:hover {
+    background-color: #2a2b38;
+}
+
+.enlace i {
+    margin-right: 10px;
+    font-size: 20px;
+}
+
+.logout-button {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    color: #fff;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 10px 15px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+    margin-top: auto;
+}
+
+.logout-button i {
+    margin-right: 10px;
+    font-size: 20px;
+}
+
+.logout-button:hover {
+    background-color: #2a2b38;
+}
+
+.container {
+    margin-left: 270px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 60px;
+    background-color: #0D0E16;
+    margin-top: 50px;
+
+}
+.container h2 {
+  font-size: 40px;
+
+}
+
+form {
+    background-color: #ffffff;
+    color: #000000;
+    border-radius: 10px;
+    padding: 3%;
+    width: 800px;
+    height: auto;
+    margin: 50px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-header {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    color: #ffffff;
+    margin-bottom: 5px;
+    margin-top: -20px;
+}
+
+.form-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+form input[type="password"] {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    width: 100%;
+}
+
+form input {
+    flex: 1;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 100%;
+    font-size: 16px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cancel-button,
+.save-button {
+    padding: 10px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 45%;
+}
+
+.save-button {
+    background-color: #D32F2F;
+    color: #fff;
+}
+
+.save-button:hover {
+    background-color: #b71c1c;
+}
+
+.cancel-button {
+    background-color: #e0e0e0;
+    color: #000;
+}
+
+.cancel-button:hover {
+    background-color: #bdbdbd;
+}
