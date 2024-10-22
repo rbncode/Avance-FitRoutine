@@ -19,7 +19,7 @@ const router = createRouter({
       // which is lazy-loaded when the route is visited.
     },
     {
-      path: "/seleccionar-rutina",
+      path: "/agregar-rutinas",
       name: "selección-rutina",
       component: SeleccionRutina,
     },
