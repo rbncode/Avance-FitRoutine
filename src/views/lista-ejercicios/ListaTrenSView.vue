@@ -39,3 +39,66 @@ onMounted(cargarEjercicios);
         </section>
     </main>
 </template>
+
+<style scoped>
+.ejercicios-container {
+    font-family: 'Poppins', sans-serif;
+    background-color: #292828;
+    color: #fff;
+}
+
+.main-content {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.main-content h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.main-content p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.lista {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding: 0 20px;
+}
+
+.ejercicio {
+    background-color: #ffffff;
+    color: #000;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.ejercicio img {
+    height: 200px;
+    width: 200px;
+    left: 60px;
+    position: relative;
+    object-fit: cover;
+    border-bottom: 2px solid #fff;
+}
+
+.ejercicio h3 {
+    font-size: 22px;
+    margin: 15px 0 10px;
+}
+
+.ejercicio p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+</style>
