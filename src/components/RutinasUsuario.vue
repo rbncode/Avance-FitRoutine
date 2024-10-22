@@ -1,4 +1,35 @@
-<script></script>
+<script>
+import TarjetaRutina from "./TarjetaRutina.vue";
+import axios from "axios";
+export default {
+  components: {
+    TarjetaRutina,
+  },
+  data() {
+    return {
+      rutinas: [],
+    };
+  },
+  mounted() {
+    this.cargarRutinasGuardadas();
+  },
+  methods: {
+    cargarRutinasGuardadas() {
+      axios
+        .get("http://localhost:3000/rutinas")
+        .then((response) => {
+          this.rutinas = data;
+        })
+        .catch((error) => {
+          console.error("Error al cargar las rutinas:", error);
+        });
+    },
+    verDetalles(id) {
+      this.$router.push({ name: "ver rutina", params: { id: id } });
+    },
+  },
+};
+</script>
 
 <template>
   <div v-if="rutinas.length == 0">
