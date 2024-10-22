@@ -88,12 +88,13 @@ onMounted(cargarEjercicio);
     .button-volver:hover {
         background-color: #c00;
     }
-}
 
-.barra-superior h2 {
-    text-align: center;
-    align-items: center;
-    font-size: 2rem;
+    h2 {
+        margin-top: 30px;
+        text-align: center;
+        align-items: center;
+        font-size: 2rem;
+    }
 }
 
 .grid-container-ejercicio {
@@ -118,7 +119,8 @@ onMounted(cargarEjercicio);
     width: 50%;
 }
 
-.instrucciones ul, .peso-recomendado ul{
+.instrucciones ul,
+.peso-recomendado ul {
     margin: 15px 0;
 }
 
