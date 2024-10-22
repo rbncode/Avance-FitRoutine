@@ -57,3 +57,133 @@
         </div>
     </main>
   </template>
+
+  <style scoped>
+  
+.coach-container {
+  font-family: 'Poppins', sans-serif;
+  background-color: #292828;
+  color: #fff;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.mensaje-inicial {
+  text-align: center;
+
+  h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+  }
+}
+
+.centrar {
+  text-align: center;
+}
+
+.contenedor-principal {
+  width: 80%;
+  max-width: 900px;
+  margin: 15px auto;
+  background-color: #212121;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.rutinas {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.rutina {
+  background-color: #2c2c2c;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: left;
+
+  h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+  }
+
+  p {
+    margin-bottom: 10px;
+    font-size: 1.2em;
+    color: #b0b0b0;
+  }
+
+  ul {
+    margin-left: 20px;
+    color: #fff;
+  }
+
+  ul li {
+    margin-bottom: 5px;
+  }
+}
+
+/* Resumen de datos */
+.resumen-datos {
+  background-color: #2c2c2c;
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 20px;
+  text-align: left;
+
+  h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+  }
+
+  p {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: #b0b0b0;
+  }
+
+  .destacar {
+    color: #fff;
+    font-weight: bold;
+  }
+}
+
+/* Recomendaciones de salud */
+.recomendaciones-salud {
+  background-color: #2c2c2c;
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 20px;
+  text-align: left;
+
+  h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+  }
+
+  p {
+    font-size: 1.1em;
+    color: #b0b0b0;
+  }
+}
+
+.boton-continuar {
+  background-color: #d22;
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  font-size: 1.2em;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 30px;
+}
+
+.boton-continuar:hover {
+  background-color: #c00;
+}
+
+</style>
