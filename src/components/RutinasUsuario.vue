@@ -18,7 +18,7 @@ export default {
       axios
         .get("http://localhost:3000/rutinas")
         .then((response) => {
-          this.rutinas = data;
+          this.rutinas = response.data;
         })
         .catch((error) => {
           console.error("Error al cargar las rutinas:", error);
