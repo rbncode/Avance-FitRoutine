@@ -1,3 +1,37 @@
+<script setup>
+import BotonNegro from '@/components/BotonNegro.vue';
+import axios from 'axios';
+import { useRouter } from 'vue-router';
+import { ref, onMounted } from 'vue';
+
+const ejercicios = ref([]);
+const router = useRouter();
+
+const cargarEjercicios = async () => {
+    try {
+        const res = await axios.get('http://localhost:3000/ejercicios');
+        ejercicios.value = res.data;
+    } catch (error) {
+        console.error('Error al cargar los ejercicios:', error);
+    }
+};
+
+const editarEjercicio = (id) => {
+    router.push(`/AdminEditarEjercicio/${id}`);
+};
+
+const eliminarEjercicio = async (id) => {
+    try {
+        await axios.delete(`http://localhost:3000/ejercicios/${id}`);
+        cargarEjercicios();
+    } catch (error) {
+        console.error('Error al eliminar el ejercicio:', error);
+    }
+};
+
+onMounted(cargarEjercicios);
+</script>
+
 <template>
 
     <main>
@@ -14,20 +48,21 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr >
-                            <td>nombre ejercicio</td>
-                            <td>grupo muscular</td>
-                            <td class="centrar">peso recomendado</td>
+                        <tr v-for="ejercicio in ejercicios" :key="ejercicio.id">
+                            <td>{{ ejercicio.nombre }}</td>
+                            <td>{{ ejercicio.grupoMuscular }}</td>
+                            <td class="centrar">{{ ejercicio.pesoRecomendado }} Kg</td>
                             <td>
-                                <button class="btn editar">
+                                <button class="btn editar" @click="editarEjercicio(ejercicio.id)">
                                     <i class='bx bx-edit'></i>Editar
                                 </button>
-                                <button class="btn eliminar" ><i
+                                <button class="btn eliminar" @click="eliminarEjercicio(ejercicio.id)"><i
                                         class='bx bx-trash'></i>Eliminar</button>
                             </td>
                         </tr>
                     </tbody>
                 </table>
+                <BotonNegro link="/AdminCrearEjercicio" button-text="+ Añadir Ejercicio" />
             </div>
         </section>
     </main>
