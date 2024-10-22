@@ -1,25 +1,25 @@
 <template>
     <div class="container">
-        <form>
+        <form @submit.prevent="editarEjercicio">
             <h2 class="form-header">Editar Ejercicio</h2>
             <div class="form-row">
                 <div class="left">
                     <p>Nombre del Ejercicio</p>
-                    <input type="text" placeholder="Nombre previo..." required>
+                    <input type="text" v-model="ejercicio.nombre" placeholder="Nombre previo..." required>
                     <p>Descripción</p>
-                    <input type="text" placeholder="Descripción previa..." required>
+                    <input type="text" v-model="ejercicio.descripcion" placeholder="Descripción previa..." required>
                     <p>Instrucciones</p>
-                    <textarea placeholder="Instrucciones previas..."
+                    <textarea v-model="ejercicio.instrucciones" placeholder="Instrucciones previas..."
                         rows="4"></textarea>
                     <div class="valores-def">
                         <p>Peso Recomendado</p>
                         <div class="peso-recomendado">
-                            <input type="number" id="pesoRecomendado" required />
+                            <input type="number" v-model="ejercicio.pesoRecomendado" id="pesoRecomendado" required />
                             <label for="pc-checkbox" class="pc-label">PC</label>
                             <input type="checkbox" id="pc-checkbox">
                         </div>
                         <label for="grupoMuscular">Grupo Muscular:</label>
-                        <select id="grupoMuscular" required>
+                        <select v-model="ejercicio.grupoMuscular" id="grupoMuscular" required>
                             <option value="Tren Superior">Tren Superior</option>
                             <option value="Core">Core</option>
                             <option value="Tren Inferior">Tren Inferior</option>
@@ -28,21 +28,83 @@
                 </div>
                 <div class="right">
                     <h3>Demostración del ejercicio</h3>
-                    <input type="file" class="selector-archivo" accept="image/*"/>
+                    <input type="file" class="selector-archivo" @change="cargarImagen" accept="image/*"/>
                     <label>Previsualización de Demostración</label>
                     <div class="preview">
-                        <img src=".." width="150px" alt="Demostración.jpg" />
+                        <img :src="imagenURL || ejercicio.imagen || 'https://via.placeholder.com/150'" width="150px" alt="Demostración.jpg" />
                     </div>
                 </div>
             </div>
             <div class="buttons">
-                <button type="button" class="cancel-button">Cancelar</button>
+                <button type="button" class="cancel-button" @click="cancelarCambios">Cancelar</button>
                 <button type="submit" class="save-button">Guardar Cambios</button>
             </div>
         </form>
     </div>
 </template>
 
+<script>
+import { ref, onMounted } from 'vue';
+import { useRoute, useRouter } from 'vue-router';
+import axios from 'axios';
+
+export default {
+    setup() {
+        const ejercicio = ref({
+            nombre: '',
+            grupoMuscular: '',
+            pesoRecomendado: 0,
+            descripcion: '',
+            imagen: ''
+        });
+        const imagenURL = ref('');
+        const route = useRoute();
+        const router = useRouter();
+
+        const cargarEjercicio = async () => {
+            try {
+                const res = await axios.get(`http://localhost:3000/ejercicios/${route.params.id}`);
+                ejercicio.value = res.data;
+            } catch (error) {
+                console.error('Error al cargar el ejercicio:', error);
+            }
+        };
+
+        const cargarImagen = (event) => {
+            const archivo = event.target.files[0];
+            if (archivo) {
+
+                ejercicio.value.imagen = `/src/views/lista-ejercicios/img-ejercicios/${archivo.name}`;
+                imagenURL.value = URL.createObjectURL(archivo);
+            }
+        };
+
+        const editarEjercicio = async () => {
+            try {
+                await axios.put(`http://localhost:3000/ejercicios/${route.params.id}`, ejercicio.value);
+                router.push('/AdminListaEjercicios');
+            } catch (error) {
+                console.error('Error al editar el ejercicio:', error);
+                alert('Error al editar el ejercicio');
+            }
+        };
+
+        const cancelarCambios = () => {
+            router.push('/AdminListaEjercicios');
+        };
+
+        onMounted(cargarEjercicio);
+
+        return {
+            ejercicio,
+            imagenURL,
+            cargarImagen,
+            editarEjercicio,
+            cancelarCambios
+        };
+    }
+};
+</script>
 
 <style scoped>
 .container {
