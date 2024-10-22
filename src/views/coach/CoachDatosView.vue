@@ -1,3 +1,26 @@
+<script setup>
+import BotonRojo from '@/components/BotonRojo.vue';
+import { ref } from 'vue';
+import { useRouter } from 'vue-router';
+
+const peso = ref(null);
+const altura = ref(null);
+const sexo = ref(null);
+const dias = ref(null);
+const error = ref("");
+const router = useRouter();
+
+const enviarDatos = () => {
+    error.value = "";
+    localStorage.setItem('peso', peso.value);
+    localStorage.setItem('altura', altura.value);
+    localStorage.setItem('sexo', sexo.value);
+    localStorage.setItem('dias', dias.value);
+    router.push('/CoachObjetivo'); 
+};
+
+</script>
+
 <template>
 
     <main class="coach-container">
@@ -12,14 +35,14 @@
         </div>
         <div class="coach-virtual">
             <div class="options">
-                <form>
+                <form @submit="enviarDatos">
                     <div class="options">
 
                         <!-- Altura -->
                         <div class="option">
                             <label for="altura">¿Cuánto mides?</label>
                             <img src="../coach/img-coach/limite-de-altura.png" alt="altura.png">
-                            <input type="number" id="altura" placeholder="Cm" required min="120"
+                            <input type="number" id="altura" placeholder="Cm" required v-model="altura" min="120"
                                 max="250">
                         </div>
 
@@ -27,7 +50,7 @@
                         <div class="option">
                             <label for="peso">¿Cuánto pesas?</label>
                             <img src="../coach/img-coach/bascula(1).png" alt="bascula.png">
-                            <input type="number" id="peso" placeholder="Kg" required min="20" max="560">
+                            <input type="number" id="peso" placeholder="Kg" required v-model="peso" min="20" max="560">
                         </div>
 
                         <!-- Sexo -->
@@ -35,10 +58,10 @@
                             <label>¿Cuál es tu sexo?</label>
                             <img src="../coach/img-coach/masculino-y-femenino.png" alt="sexos.png">
                             <div class="sexo-options">
-                                <input type="radio" id="masculino" name="sexo" value="masculino"
+                                <input type="radio" id="masculino" name="sexo" value="masculino" v-model="sexo"
                                     required>
                                 <label for="masculino">Masculino</label>
-                                <input type="radio" id="femenino" name="sexo" value="femenino" required>
+                                <input type="radio" id="femenino" name="sexo" value="femenino" v-model="sexo" required>
                                 <label for="femenino">Femenino</label>
                             </div>
                         </div>
@@ -47,8 +70,13 @@
                         <div class="option">
                             <label for="dias">¿Cuántos días entrenarás?</label>
                             <img src="../coach/img-coach/calendario.png" alt="calendario.png">
-                            <input type="number" id="dias" placeholder="1 a 7" required min="1" max="7">
+                            <input type="number" id="dias" placeholder="1 a 7" required v-model="dias" min="1" max="7">
                         </div>
+                    </div>
+
+                    <!-- Mostrar error si existe -->
+                    <div v-if="error" class="error-message">
+                        <p>{{ error }}</p>
                     </div>
 
                     <button type="submit" class="boton-continuar">Continuar</button>
@@ -59,7 +87,6 @@
     </main>
 
 </template>
-
 
 <style scoped>
 .coach-container {
