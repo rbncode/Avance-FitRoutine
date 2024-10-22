@@ -46,3 +46,80 @@ import BotonRojo from '@/components/BotonRojo.vue';
         </div>
     </main>
 </template>
+
+<style scoped>
+.coach-container {
+    font-family: 'Poppins', sans-serif;
+    background-color: #292828;
+    color: #fff;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.mensaje-inicial {
+    text-align: center;
+
+    h2 {
+        font-size: 2em;
+        margin-bottom: 10px;
+        margin-top: 20px;
+    }
+}
+
+.boton {
+    margin-left: 30px;
+}
+
+.coach-virtual {
+    text-align: center;
+    padding: 20px;
+    margin: 10px auto 20px auto;
+    width: 90%;
+    max-width: 1000px;
+    background-color: #212121;
+    color: white;
+    border-radius: 10px;
+}
+
+.coach-virtual h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.coach-virtual p {
+    margin-bottom: 30px;
+    font-size: 1.2em;
+}
+
+.options {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+
+    p {
+        font-size: 0.8rem;
+    }
+}
+
+.option {
+    background-color: #2c2c2c;
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;
+    text-align: center;
+}
+
+.option img {
+    width: 70%;
+    margin-bottom: 10px;
+}
+
+.option label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+}
+</style>
