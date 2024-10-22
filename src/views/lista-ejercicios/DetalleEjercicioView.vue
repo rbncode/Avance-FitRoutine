@@ -59,3 +59,74 @@ onMounted(cargarEjercicio);
         </div>
     </main>
 </template>
+
+<style>
+.detalle-container {
+    font-family: 'Poppins', sans-serif;
+    background-color: #292828;
+    color: #fff;
+}
+
+.barra-superior {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    .button-volver {
+        margin-left: 25px;
+        background-color: #d22;
+        color: white;
+        border: none;
+        font-size: 1.2em;
+        border-radius: 10px;
+        cursor: pointer;
+        margin-top: 30px;
+        width: 120px;
+        height: 45px;
+        padding: 10px;
+    }
+
+    .button-volver:hover {
+        background-color: #c00;
+    }
+}
+
+.barra-superior h2 {
+    text-align: center;
+    align-items: center;
+    font-size: 2rem;
+}
+
+.grid-container-ejercicio {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 20px 90px;
+    padding: 20px;
+    border-radius: 3%;
+    background-color: #ffffff;
+    color: #121212;
+}
+
+.instrucciones h3,
+.peso-mensaje,
+.demo h3 {
+    background-color: #121212;
+    color: #ffffff;
+    font-size: 2rem;
+    padding-left: 7%;
+    margin: 0 -1%;
+    border-radius: 5%;
+    width: 50%;
+}
+
+.instrucciones ul, .peso-recomendado ul{
+    margin: 15px 0;
+}
+
+.grid-container ul {
+    margin: 3%;
+}
+
+.peso-mensaje {
+    width: 80%;
+}
+</style>
