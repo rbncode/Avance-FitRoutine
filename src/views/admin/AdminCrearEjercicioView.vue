@@ -1,26 +1,81 @@
+<script>
+export default {
+    data() {
+        return {
+            nombre: '',
+            descripcion: '',
+            instrucciones: '',
+            pesoRecomendado: '',
+            grupoMuscular: '',
+            imagen: '', 
+            imagenURL: '',  
+        };
+    },
+    methods: {
+        cargarImagen(event) {
+            const archivo = event.target.files[0];
+            if (archivo) {
+
+                this.imagen = `/src/views/lista-ejercicios/img-ejercicios/${archivo.name}`;
+                this.imagenURL = URL.createObjectURL(archivo);
+            }
+        },
+        async guardarEjercicio() {
+            const nuevoEjercicio = {
+                nombre: this.nombre,
+                descripcion: this.descripcion,
+                instrucciones: this.instrucciones,
+                pesoRecomendado: this.pesoRecomendado,
+                grupoMuscular: this.grupoMuscular,
+                imagen: this.imagen  
+            };
+
+            try {
+                const res = await fetch('http://localhost:3000/ejercicios', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(nuevoEjercicio),
+                });
+
+                if (res.ok) {
+                    this.$router.push('/AdminListaEjercicios');
+                } else {
+                    alert('Error al guardar el ejercicio');
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                alert('Error al conectar con la base de datos');
+            }
+        }
+    }
+};
+</script>
+
 <template>
     <div class="container">
-        <form>
+        <form @submit.prevent="guardarEjercicio">
             <h2 class="form-header">Registro de Nuevo Ejercicio</h2>
             <div class="form-row">
                 <div class="left">
                     <!-- Campos de texto -->
                     <p>Nombre del Ejercicio</p>
-                    <input type="text" placeholder="Nombre" required>
+                    <input type="text" v-model="nombre" placeholder="Nombre" required>
                     <p>Descripción</p>
-                    <input type="text" placeholder="Descripción" required>
+                    <input type="text" v-model="descripcion" placeholder="Descripción" required>
                     <p>Instrucciones</p>
-                    <textarea placeholder="Instrucciones" rows="4"></textarea>
+                    <textarea v-model="instrucciones" placeholder="Instrucciones" rows="4"></textarea>
                     <div class="valores-def">
                         <!-- Peso recomendado y grupo muscular -->
                         <p>Peso Recomendado</p>
                         <div class="peso-recomendado">
-                            <input type="number" required />
+                            <input type="number" v-model="pesoRecomendado" required />
                             <label for="pc-checkbox" class="pc-label">PC</label>
                             <input type="checkbox" id="pc-checkbox">
                         </div>
                         <p>Grupo Muscular</p>
-                        <select required>
+                        <select v-model="grupoMuscular" required>
                             <option value="">Seleccionar categoría</option>
                             <option value="Tren Superior">Tren Superior</option>
                             <option value="Core">Core</option>
@@ -31,10 +86,10 @@
 
                 <div class="right">
                     <h3>Demostración del ejercicio</h3>
-                    <input type="file" class="selector-archivo" accept="image/*" required/>
+                    <input type="file" class="selector-archivo" @change="cargarImagen" accept="image/*" required/>
                     <label>Previsualización de Demostración</label>
                     <div class="preview">
-                        <img src=".." width="150px" alt="Demostración" />
+                        <img :src="imagenURL || 'https://via.placeholder.com/150'" width="150px" alt="Demostración" />
                     </div>
                 </div>
             </div>
@@ -59,6 +114,7 @@
     align-items: center;
     padding: 0 60px;
     background-color: #0D0E16;
+
 }
 
 form {
