@@ -3,8 +3,8 @@ import RutinasUsuario from "@/components/RutinasUsuario.vue";
 </script>
 
 <template>
-  <div class="about">
-    <h1>This is an about page</h1>
+  <div class="container">
+    <RutinasUsuario />
   </div>
 </template>
 
