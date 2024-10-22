@@ -1,0 +1,76 @@
+{
+  "ejercicios": [
+    {
+      "id": "1",
+      "nombre": "Press de Banca",
+      "descripcion": "Trabaja principalmente el pecho, los hombros y los tríceps, levantando una barra desde una posición acostada en un banco.",
+      "instrucciones": "Acuéstate boca arriba en un banco plano, con los pies apoyados en el suelo.\nSostén la barra con ambas manos a una anchura ligeramente mayor que la de los hombros.\nBaja la barra hasta que toque ligeramente el pecho, manteniendo los codos a 45 grados.\nEmpuja la barra hacia arriba, extendiendo los brazos completamente.\nRepite manteniendo un control constante sobre el movimiento.",
+      "pesoRecomendado": 20,
+      "grupoMuscular": "Tren Superior",
+      "imagen": "/src/views/lista-ejercicios/img-ejercicios/press banca gif.gif"
+    },
+    {
+      "id": "414f",
+      "nombre": "Curl de Bicep con Barra",
+      "descripcion": "Ejercicio enfocado principalmente en tus biceps",
+      "instrucciones": "Párate derecho, con los pies a la anchura de los hombros.\nSostén la barra recta con las palmas hacia arriba (agarre supino), manos separadas a la anchura de los hombros.\nMantén los codos pegados al cuerpo mientras levantas la barra hacia el pecho contrayendo los bíceps.\nBaja la barra de forma controlada hasta la posición inicial.\nRepite el movimiento manteniendo la tensión en los bíceps.",
+      "pesoRecomendado": 10,
+      "grupoMuscular": "Tren Superior",
+      "imagen": "/src/views/lista-ejercicios/img-ejercicios/curl-de-bicep-con-barra.gif"
+    },
+    {
+      "id": "6a67",
+      "nombre": "Curl de Biceps con Mancuerna",
+      "descripcion": "Ejercicio enfocado principalmente en tus biceps.",
+      "instrucciones": "Párate derecho con los pies a la altura de los hombros, sosteniendo una mancuerna en cada mano con las palmas hacia arriba.\nMantén los codos pegados al cuerpo mientras levantas ambas mancuernas hacia el pecho, contrayendo los bíceps.\nBaja las mancuernas de manera controlada hasta la posición inicial.\nRepite el movimiento, alternando o levantando ambas mancuernas al mismo tiempo.",
+      "pesoRecomendado": 4,
+      "grupoMuscular": "Tren Superior",
+      "imagen": "/src/views/lista-ejercicios/img-ejercicios/curl-de-bicep-mancuerna.gif"
+    },
+    {
+      "id": "c8b4",
+      "nombre": "Remo de 90° Abierto con Mancuerna",
+      "descripcion": "Ejercicio enfocado principalmente los músculos dorsales, trapecios y deltoides posteriores.",
+      "instrucciones": "Inclina el torso hacia adelante con la espalda recta, manteniendo una flexión de 90 grados en la cadera.\nSostén una mancuerna en cada mano con las palmas mirando hacia ti.\nAbre los codos hacia los lados y levanta las mancuernas hacia el nivel de los hombros, contrayendo los músculos de la espalda.\nBaja las mancuernas de forma controlada hasta la posición inicial.\nRepite el movimiento, manteniendo el torso estable.",
+      "pesoRecomendado": 5,
+      "grupoMuscular": "Tren Superior",
+      "imagen": "/src/views/lista-ejercicios/img-ejercicios/remo-90-abierto-mancuerna.gif"
+    },
+    {
+      "id": "f0ae",
+      "nombre": "Remo Horizontal con Mancuerna",
+      "descripcion": "Ejercicio enfocado principalmente en trabajar la espalda, especialmente los músculos dorsales, romboides y trapecios.",
+      "instrucciones": "Coloca una rodilla y una mano sobre un banco plano para mantener el torso inclinado y estable.\nCon la otra mano, toma la mancuerna con un agarre neutro (palma hacia el cuerpo).\nTira de la mancuerna hacia tu torso, llevando el codo hacia arriba, manteniéndolo cerca del cuerpo.\nBaja la mancuerna de forma controlada hasta la posición inicial.\nRepite el movimiento y luego cambia de lado.",
+      "pesoRecomendado": 5,
+      "grupoMuscular": "Tren Superior",
+      "imagen": "/src/views/lista-ejercicios/img-ejercicios/remo-horizontal-mancuerna.gif"
+    },
+    {
+      "id": "43d5",
+      "nombre": "Peso Muerto",
+      "descripcion": "Ejercicio compuesto que trabaja la cadena posterior, incluyendo los glúteos, isquiotibiales, espalda baja y trapecios.",
+      "instrucciones": "Párate con los pies a la anchura de los hombros, con una barra en el suelo frente a ti.\nAgarra la barra con las manos ligeramente fuera de las piernas (agarre pronado o mixto).\nBaja las caderas, mantén la espalda recta y mira hacia adelante.\nLevanta la barra empujando con los talones, estirando las caderas y rodillas hasta quedar de pie.\nBaja la barra de manera controlada hasta el suelo, manteniendo la espalda recta.",
+      "pesoRecomendado": 20,
+      "grupoMuscular": "Tren Inferior",
+      "imagen": "/src/views/lista-ejercicios/img-ejercicios/peso-muerto.gif"
+    },
+    {
+      "id": "f46c",
+      "nombre": "Estocada con Barra",
+      "descripcion": "Ejercicio de fuerza que trabaja principalmente los cuádriceps, glúteos e isquiotibiales, mejorando la estabilidad y el equilibrio.",
+      "instrucciones": "Coloca una barra en la parte superior de la espalda (en los trapecios), asegurándote de que esté equilibrada.\nPárate con los pies a la altura de los hombros.\nDa un paso hacia adelante con una pierna, bajando el cuerpo hasta que la rodilla de la pierna trasera casi toque el suelo.\nAsegúrate de que la rodilla delantera no sobrepase los dedos del pie.\nEmpuja con la pierna delantera para volver a la posición inicial.\nAlterna las piernas y repite.",
+      "pesoRecomendado": 20,
+      "grupoMuscular": "Tren Inferior",
+      "imagen": "/src/views/lista-ejercicios/img-ejercicios/estocada-con-barra.gif"
+    },
+    {
+      "id": "7c05",
+      "nombre": "Sentadilla con Barra",
+      "descripcion": "Ejercicio compuesto que fortalece los músculos de las piernas, glúteos y core, mejorando la estabilidad y la movilidad.",
+      "instrucciones": "Coloca la barra en la parte superior de la espalda (en los trapecios) y asegúrate de que esté equilibrada.\nPárate con los pies a la anchura de los hombros y las puntas ligeramente hacia afuera.\nMantén el pecho erguido y la mirada hacia adelante mientras bajas el cuerpo como si te fueras a sentar en una silla.\nBaja hasta que tus muslos estén paralelos al suelo o más abajo si puedes mantener la forma.\nEmpuja a través de los talones para volver a la posición inicial, manteniendo la espalda recta.",
+      "pesoRecomendado": 20,
+      "grupoMuscular": "Tren Inferior",
+      "imagen": "/src/views/lista-ejercicios/img-ejercicios/sentadilla-barra.gif"
+    }
+  ]
+}
