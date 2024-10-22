@@ -1,29 +1,33 @@
-# Avance-FitRoutine
+# FITROUTINE
 
-This template should help get you started developing with Vue 3 in Vite.
+Proyecto enfocado a la generación de rutinas para personas principiantes y/o avanzadas para mantener un régimen de ejercicio.
 
-## Recommended IDE Setup
+**Link del prototipo en Figma:** [FITOURINE](https://www.figma.com/design/iaEpbRiCy3g22NkQd2RBSm/Proyecto-y-Aplicacion-Editable?node-id=0-1&t=9Fa0pGguQDwxwcyJ-1)
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+**Integrantes del Equipo:**
 
-## Customize configuration
+- Camilo Rojas
+- Robin Vásquez
+- Benjamín Urrea
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+## Funcionalidades asignadas a cada miembro
 
-## Project Setup
+### Camilo Rojas
 
-```sh
-npm install
-```
+- CRUD Usuarios
+- Registro de Usuario
+- Inicio de Sesión
+- Perfil de Usuario
 
-### Compile and Hot-Reload for Development
+### Robin Vásquez
 
-```sh
-npm run dev
-```
+- CRUD Rutinas
+- Selección de Rutinas
+- Listado de Rutinas
+- Selección de Ejercicios
 
-### Compile and Minify for Production
+### Benjamín Urrea
 
-```sh
-npm run build
-```
+- CRUD Ejercicios
+- Coach Virtual
+- Detalles de Ejercicios
