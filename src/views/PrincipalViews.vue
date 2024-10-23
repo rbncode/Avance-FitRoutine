@@ -36,7 +36,7 @@ import EjerciciosComponente from '@/components/EjerciciosComponente.vue';
 <style scoped>
 .hero {
     position: relative;
-    background: url('../views/img//fitrutine-principal.png') no-repeat center center/cover;
+    background: url('../views/img/fitrutine-principal.png') no-repeat center center/cover;
     height: 70vh;
     display: flex;
     justify-content: center;
