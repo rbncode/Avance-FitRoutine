@@ -3,7 +3,6 @@ export default {
   data() {
     return {
       nombre: "",
-      objetivos: "",
       descripcion: "",
       nivelDificultad: "",
       grupoMuscular: "",
@@ -31,7 +30,6 @@ export default {
     async guardarRutina() {
       const nuevaRutina = {
         nombre: this.nombre,
-        objetivo: this.objetivo,
         descripcion: this.descripcion,
         nivelDificultad: this.nivelDificultad,
         grupoMuscular: this.grupoMuscular,
@@ -70,18 +68,11 @@ export default {
           <!-- Campos de texto -->
           <p>Nombre de la Rutina</p>
           <input type="text" v-model="nombre" placeholder="Nombre" required />
-          <p>Objetivo</p>
-          <input
-            type="text"
-            v-model="objetivo"
-            placeholder="Objetivo"
-            required
-          />
           <p>Descripción</p>
           <textarea
-            v-model="descripción"
+            v-model="descripcion"
             placeholder="descripción"
-            rows="4"
+            rows="2"
           ></textarea>
           <div class="valores-def">
             <!-- Peso recomendado y grupo muscular -->
@@ -102,7 +93,8 @@ export default {
               <option value="Tren Inferior">Tren Inferior</option>
             </select>
           </div>
-          <select v-model="ejercicioSeleccionado" required>
+          <p>Escojer Ejercicios</p>
+          <select v-model="ejercicioSeleccionado">
             <option value="" disabled>Seleccionar ejercicio</option>
             <option
               v-for="ejercicio in ejerciciosDisponibles"
@@ -127,7 +119,7 @@ export default {
       <div class="buttons">
         <button
           type="button"
-          @click="$router.push('/admin-lista-rutinas')"
+          @click="$router.push('/AdminListaRutinas')"
           class="cancel-button"
         >
           Cancelar

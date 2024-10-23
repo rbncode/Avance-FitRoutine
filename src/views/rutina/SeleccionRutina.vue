@@ -36,32 +36,6 @@ onMounted(() => {
 <template>
   <main>
     <div class="busqueda-container">
-      <div class="form-container">
-        <div class="vertical-form">
-          <label for="level">Seleccione su nivel:</label>
-          <select id="level" name="level" v-model="selectedLevel">
-            <option value="" disabled selected hidden>Nivel</option>
-            <option value="principiante">Principiante</option>
-            <option value="intermedio">Intermedio</option>
-            <option value="avanzado">Avanzado</option>
-          </select>
-        </div>
-
-        <div class="vertical-form">
-          <label for="muscle-group">Seleccione sector muscular:</label>
-          <select
-            id="muscle-group"
-            name="muscle-group"
-            v-model="selectedMuscleGroup"
-          >
-            <option value="" disabled selected hidden>Sector muscular</option>
-            <option value="Tren Superior">T. Superior</option>
-            <option value="Core">Core</option>
-            <option value="Tren Inferior">T. Inferior</option>
-          </select>
-        </div>
-      </div>
-
       <div class="resultados">
         <div v-for="(rutina, index) in filtrarRutinas" :key="index">
           <TarjetaRutina :rutina="rutina" />

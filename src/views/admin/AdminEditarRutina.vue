@@ -1,87 +1,67 @@
 <script>
-export default {
-  data() {
-    return {
-      nombre: "",
-      objetivos: "",
-      descripcion: "",
-      nivelDificultad: "",
-      grupoMuscular: "",
-      ejerciciosDisponibles: [],
-      ejercicios: [],
-    };
-  },
-  methods: {
-    async cargarEjercicios() {
-      try {
-        const res = await fetch("http://localhost:3000/ejercicios");
-        this.ejerciciosDisponibles = await res.json();
-      } catch (error) {
-        console.error("Error al obtener los ejercicios:", error);
-      }
-    },
-    agregarEjercicio() {
-      const ejercicio = this.ejerciciosDisponibles.find(
-        (ej) => ej.nombre === this.ejercicioSeleccionado
-      );
-      if (ejercicio && !this.ejercicios.includes(ejercicio)) {
-        this.ejercicios.push(ejercicio);
-      }
-    },
-    async guardarRutina() {
-      const nuevaRutina = {
-        nombre: this.nombre,
-        objetivo: this.objetivo,
-        descripcion: this.descripcion,
-        nivelDificultad: this.nivelDificultad,
-        grupoMuscular: this.grupoMuscular,
-        ejercicios: this.ejercicios,
-      };
+import { ref, onMounted } from "vue";
+import { useRoute, useRouter } from "vue-router";
+import axios from "axios";
 
-      try {
-        const res = await fetch("http://localhost:3000/rutinas", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(nuevaRutina),
-        });
+const route = useRoute();
+const router = useRouter();
 
-        if (res.ok) {
-          this.$router.push("/AdminListaRutinas");
-        } else {
-          alert("Error al guardar la rutina");
-        }
-      } catch (error) {
-        console.error("Error:", error);
-        alert("Error al conectar con la base de datos");
-      }
-    },
-  },
+const nombre = ref("");
+const descripcion = ref("");
+const nivelDificultad = ref("");
+const grupoMuscular = ref("");
+const ejerciciosDisponibles = ref([]);
+const ejercicios = ref([]);
+
+const cargarEjercicios = async () => {
+  try {
+    const res = await fetch("http://localhost:3000/ejercicios");
+    ejerciciosDisponibles.value = await res.json();
+  } catch (error) {
+    console.error("Error al obtener los ejercicios:", error);
+  }
 };
+
+const editarRutina = async () => {
+  const rutinaActualizada = {
+    nombre: nombre.value,
+    descripcion: descripcion.value,
+    nivelDificultad: nivelDificultad.value,
+    grupoMuscular: grupoMuscular.value,
+    ejercicios: ejercicios.value,
+  };
+
+  try {
+    await axios.put(
+      `http://localhost:3000/rutinas/${route.params.id}`,
+      rutinaActualizada
+    );
+    router.push("/AdminListaRutinas");
+  } catch (error) {
+    console.error("Error al editar la rutina:", error);
+    alert("Error al editar la rutina");
+  }
+};
+
+onMounted(() => {
+  cargarEjercicios();
+});
 </script>
 
 <template>
   <div class="container">
-    <form @submit.prevent="guardarRutina">
-      <h2 class="form-header">Registro de Nueva Rutina</h2>
+    <form @submit.prevent="editarRutina">
+      <h2 class="form-header">Editar una Rutina</h2>
       <div class="form-row">
         <div class="left">
           <!-- Campos de texto -->
           <p>Nombre de la Rutina</p>
           <input type="text" v-model="nombre" placeholder="Nombre" required />
-          <p>Objetivo</p>
-          <input
-            type="text"
-            v-model="objetivo"
-            placeholder="Objetivo"
-            required
-          />
           <p>Descripción</p>
           <textarea
             v-model="descripción"
             placeholder="descripción"
-            rows="4"
+            rows="2"
           ></textarea>
           <div class="valores-def">
             <!-- Peso recomendado y grupo muscular -->
@@ -102,7 +82,8 @@ export default {
               <option value="Tren Inferior">Tren Inferior</option>
             </select>
           </div>
-          <select v-model="ejercicioSeleccionado" required>
+          <p>Escojer Ejercicios</p>
+          <select v-model="ejercicioSeleccionado">
             <option value="" disabled>Seleccionar ejercicio</option>
             <option
               v-for="ejercicio in ejerciciosDisponibles"
@@ -127,7 +108,7 @@ export default {
       <div class="buttons">
         <button
           type="button"
-          @click="$router.push('/admin-lista-rutinas')"
+          @click="$router.push('/AdminListaRutinas')"
           class="cancel-button"
         >
           Cancelar
