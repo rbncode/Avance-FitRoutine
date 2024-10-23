@@ -2,6 +2,9 @@ import { createRouter, createWebHistory } from "vue-router";
 import SeleccionRutina from "@/views/rutina/SeleccionRutina.vue";
 import Rutinas from "@/views/rutina/Rutinas.vue";
 import VerRutina from "@/views/rutina/VerRutina.vue";
+import AdminNuevaRutina from "@/views/admin/AdminNuevaRutina.vue";
+import AdminListaRutinas from "@/views/admin/AdminListaRutinas.vue";
+import AdminEditarRutina from "@/views/admin/AdminEditarRutina.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
