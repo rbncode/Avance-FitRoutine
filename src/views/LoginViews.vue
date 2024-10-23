@@ -96,6 +96,11 @@ export default {
     margin-top: 0;
 }
 
+*{
+    box-sizing: border-box;
+}
+
+
 .wrapper {
     width: 420px;
     color: white;
