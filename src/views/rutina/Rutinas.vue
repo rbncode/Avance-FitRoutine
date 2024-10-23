@@ -6,7 +6,6 @@ import BotonVuelta from "@/components/BotonVuelta.vue";
 <template>
   <main>
     <div class="container">
-      <BotonVuelta />
       <RutinasUsuario />
     </div>
   </main>

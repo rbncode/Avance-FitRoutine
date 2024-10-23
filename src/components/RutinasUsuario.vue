@@ -32,13 +32,21 @@ export default {
 </script>
 
 <template>
-  <div v-if="rutinas.length == 0">
+  <div v-if="rutinas.length == 0" class="container">
     <h3>Aún no tienes rutinas, ¡Agrega una rutina!</h3>
-    <RouterLink to="/AgregarRutinas">Agregar Rutina</RouterLink>
+    <RouterLink class="add-routine" to="/AgregarRutinas"
+      >Agregar Rutina</RouterLink
+    >
   </div>
   <div v-else class="container">
-    <RouterLink to="/AgregarRutinas">Agregar Rutina</RouterLink>
-    <div v-for="(rutina, index) in rutinas" :key="index">
+    <RouterLink class="add-routine" to="/AgregarRutinas"
+      >Agregar Rutina</RouterLink
+    >
+    <div
+      v-for="(rutina, index) in rutinas"
+      :key="index"
+      class="container-routine"
+    >
       <TarjetaRutina :rutina="rutina" />
     </div>
   </div>
@@ -51,6 +59,13 @@ export default {
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+.container-routine {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
 }
 
 .add-routine {
@@ -68,5 +83,6 @@ export default {
   border-radius: 10px;
   flex-shrink: 0;
   text-decoration: none;
+  margin-bottom: 50px;
 }
 </style>

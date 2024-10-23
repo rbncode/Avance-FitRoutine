@@ -33,12 +33,10 @@ export default {
 <template>
   <main>
     <div class="volver">
-      <button class="volver-btn" onclick="history.back()" id="back-button">
-        Volver
-      </button>
+      <BotonVuelta />
     </div>
-    <h2 style="text-align: center">{{ rutina.nombre }}</h2>
     <div class="info-rutina">
+      <h2 style="text-align: center">{{ rutina.nombre }}</h2>
       <table>
         <thead>
           <tr>
@@ -75,19 +73,24 @@ main {
 
 h2 {
   color: white;
+  margin: 0;
+  padding: 10px 0; /* Adjust this padding as necessary */
+  text-align: center;
 }
 
 .info-rutina {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin-top: 20px; /* Reduce the margin-top to decrease the spacing */
 }
 
 .info-rutina table {
   border-radius: 10px;
   width: 50%;
-  margin: 0 auto;
-  height: 20%;
+  margin: 10px 0; /* Add some margin to create space between the heading and the table */
+  height: auto;
 }
 
 .info-rutina th {
