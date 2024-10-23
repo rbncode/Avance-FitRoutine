@@ -16,7 +16,7 @@ export default {
   methods: {
     cargarRutinasGuardadas() {
       axios
-        .get("http://localhost:3000/rutinas")
+        .get("http://localhost:3000/rutinasGuardadas")
         .then((response) => {
           this.rutinas = response.data;
         })

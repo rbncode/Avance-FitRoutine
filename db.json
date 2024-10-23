@@ -88,5 +88,40 @@
         }
       ]
     }
+  ],
+  "rutinasGuardadas": [
+    {
+      "id": "r1",
+      "nombre": "Rutina de Pecho y Tren Superior",
+      "descripcion": "Rutina enfocada en el desarrollo de la parte superior del cuerpo.",
+      "nivelDificultad": "Intermedio",
+      "grupoMuscular": "Tren Superior",
+      "ejercicios": [
+        {
+          "id": "1",
+          "nombre": "Press de Banca",
+          "descripcion": "Ejercicio para trabajar el pecho.",
+          "instrucciones": "Acostado en una banca, baja la barra de forma controlada hasta el pecho y luego empújala de regreso hacia arriba.",
+          "pesoRecomendado": 80,
+          "grupoMuscular": "Tren Superior",
+          "imagen": "/src/views/lista-ejercicios/img-ejercicios/press-banca.gif",
+          "repeticiones": 10,
+          "series": 4,
+          "descanso": 90
+        },
+        {
+          "id": "db49",
+          "nombre": "Press Militar",
+          "descripcion": "Ejercicio para trabajar los hombros y el tren superior.",
+          "instrucciones": "De pie, levanta una barra desde la clavícula hacia arriba hasta que los brazos estén completamente extendidos.",
+          "pesoRecomendado": 20,
+          "grupoMuscular": "Tren Superior",
+          "imagen": "/src/views/lista-ejercicios/img-ejercicios/press-militar.jpg",
+          "repeticiones": 12,
+          "series": 3,
+          "descanso": 60
+        }
+      ]
+    }
   ]
 }
