@@ -2,6 +2,7 @@
 import { ref, onMounted, defineProps } from "vue";
 import axios from "axios";
 import BotonRojo from "@/components/BotonRojo.vue";
+import BotonGris from "@/components/BotonGris.vue";
 
 const props = defineProps({
   id: String,
@@ -43,6 +44,7 @@ onMounted(() => {
             <th>Repeticiones</th>
             <th>Series</th>
             <th>Descanso</th>
+            <th>Detalles</th>
           </tr>
         </thead>
         <tbody>
@@ -52,6 +54,12 @@ onMounted(() => {
             <td>{{ ejercicio.repeticiones }}</td>
             <td>{{ ejercicio.series }}</td>
             <td>{{ ejercicio.descanso }}</td>
+            <td>
+              <BotonGris
+                :link="`/DetalleEjercicio/${ejercicio.id}`"
+                button-text="Detalles"
+              />
+            </td>
           </tr>
         </tbody>
       </table>
