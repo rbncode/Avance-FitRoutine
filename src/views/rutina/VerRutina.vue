@@ -62,3 +62,33 @@ export default {
     </div>
   </main>
 </template>
+<style scoped>
+.info-rutina {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.info-rutina table {
+  border-radius: 10px;
+  width: 50%;
+  margin: 0 auto;
+  height: 20%;
+}
+
+.info-rutina th {
+  background-color: #ad283d;
+  color: white;
+  padding: 10px;
+  text-align: left;
+  border: none;
+}
+
+.info-rutina td {
+  padding: 10px;
+  background-color: white;
+  border: none;
+  color: #000;
+  text-align: left;
+}
+</style>
