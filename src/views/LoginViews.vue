@@ -78,3 +78,92 @@ export default {
 };
 </script>
 
+<style scoped>
+
+
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 600px;
+    background: #0D0E16;
+    margin-top: 0;
+}
+
+.wrapper {
+    width: 420px;
+    color: white;
+}
+
+.wrapper h1 {
+    font-size: 35px;
+    text-align: center;
+}
+
+.wrapper .input-box {
+    position: relative;
+    margin: 30px 0;
+    height: 50px;
+    width: 100%;
+ 
+}
+
+.input-box input {
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    border: 1px solid white;
+    border-radius: 10px;
+    font-size: 16px;
+    color: #000000;
+    padding: 20px 40px 20px 60px;
+}
+
+
+
+.input-box input::placeholder {
+    color: #000000;
+}
+
+.input-box i {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 25px;
+    color: black;
+}
+
+.wrapper .remember-forgot {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    margin: -15px 0 15px;
+}
+
+.remember-forgot a {
+    color: #fff;
+}
+
+.remember-forgot a:hover {
+    text-decoration: underline;
+}
+
+.wrapper .btn {
+    width: 100%;
+    height: 45px;
+    border-radius: 10px;
+    border: none;
+    margin-bottom: 40px;
+    background-color: #d32f2f;
+    color: #fff;
+    font-weight: bold;
+}
+
+.error-message {
+    color: red;
+    margin-bottom: 15px;
+}
+</style>
