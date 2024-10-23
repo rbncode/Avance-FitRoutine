@@ -1,5 +1,6 @@
 <script>
 import axios from "axios";
+import BotonVuelta from "@/components/BotonVuelta.vue";
 
 export default {
   props: ["id"],
@@ -36,8 +37,7 @@ export default {
         Volver
       </button>
     </div>
-    <h1 style="text-align: center">RUTINAS</h1>
-    <h2 style="text-align: center">Nombre de Rutina</h2>
+    <h2 style="text-align: center">{{ rutina.nombre }}</h2>
     <div class="info-rutina">
       <table>
         <thead>
@@ -63,6 +63,20 @@ export default {
   </main>
 </template>
 <style scoped>
+main {
+  padding: min(30px, 7%);
+  background-color: #0f1017;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  grid-template-areas:
+    "navbar"
+    "main";
+}
+
+h2 {
+  color: white;
+}
+
 .info-rutina {
   display: flex;
   align-items: center;
