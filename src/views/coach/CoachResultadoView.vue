@@ -112,49 +112,96 @@ export default {
 
           <!-- Rutinas Recomendadas -->
           <div class="rutinas">
-            <div class="rutina">
-              <h3>RUTINA DE PIERNAS</h3>
-              <p>Objetivo: hipertografía en piernas</p>
-              <ul>
-                <li>Sentadillas</li>
-                <li>Prensa de pierna</li>
-                <li>Peso muerto</li>
-              </ul>
-              <button class="btn editar"><i class='bx bx-edit'></i>Modificar</button>
-              <button class="btn eliminar"><i class='bx bx-trash'></i>Eliminar</button>
+            <div class="container-rutina">
+              <!-- Rutinas para Ganar Masa Muscular -->
+              <div v-if="objetivo === 'Ganar masa muscular'" class="rutina">
+                <h3>RUTINA 1 - Ganar Masa Muscular</h3>
+                <ul>
+                  <li>Sentadillas</li>
+                  <li>Press de banca</li>
+                  <li>Dominadas</li>
+                </ul>
+                <button class="btn editar"><i class='bx bx-edit'></i>Modificar</button>
+                <button class="btn eliminar"><i class='bx bx-trash'></i>Eliminar</button>
+              </div>
+
+              <div v-if="objetivo === 'Ganar masa muscular'" class="rutina">
+                <h3>RUTINA 2 - Ganar Masa Muscular</h3>
+                <ul>
+                  <li>Press militar</li>
+                  <li>Remo con barra</li>
+                  <li>Flexiones</li>
+                </ul>
+                <button class="btn editar"><i class='bx bx-edit'></i>Modificar</button>
+                <button class="btn eliminar"><i class='bx bx-trash'></i>Eliminar</button>
+              </div>
+
+              <!-- Rutinas para Perder Peso -->
+              <div v-if="objetivo === 'Perder peso'" class="rutina">
+                <h3>RUTINA 1 - Perder Peso</h3>
+                <ul>
+                  <li>Correr 30 minutos</li>
+                  <li>Burpees</li>
+                  <li>Jumping jacks</li>
+                </ul>
+                <button class="btn editar"><i class='bx bx-edit'></i>Modificar</button>
+                <button class="btn eliminar"><i class='bx bx-trash'></i>Eliminar</button>
+              </div>
+
+              <div v-if="objetivo === 'Perder peso'" class="rutina">
+                <h3>RUTINA 2 - Perder Peso</h3>
+                <ul>
+                  <li>Bicicleta estática</li>
+                  <li>Plancha abdominal</li>
+                  <li>Mountain climbers</li>
+                </ul>
+                <button class="btn editar"><i class='bx bx-edit'></i>Modificar</button>
+                <button class="btn eliminar"><i class='bx bx-trash'></i>Eliminar</button>
+              </div>
+
+              <!-- Rutinas para Ganar Fuerza -->
+              <div v-if="objetivo === 'Ganar fuerza'" class="rutina">
+                <h3>RUTINA 1 - Ganar Fuerza</h3>
+                <ul>
+                  <li>Peso muerto</li>
+                  <li>Press de banca pesado</li>
+                  <li>Sentadilla frontal</li>
+                </ul>
+                <button class="btn editar"><i class='bx bx-edit'></i>Modificar</button>
+                <button class="btn eliminar"><i class='bx bx-trash'></i>Eliminar</button>
+              </div>
+
+              <div v-if="objetivo === 'Ganar fuerza'" class="rutina">
+                <h3>RUTINA 2 - Ganar Fuerza</h3>
+                <ul>
+                  <li>Press militar pesado</li>
+                  <li>Remo con barra pesado</li>
+                  <li>Dominadas con peso</li>
+                </ul>
+                <button class="btn editar"><i class='bx bx-edit'></i>Modificar</button>
+                <button class="btn eliminar"><i class='bx bx-trash'></i>Eliminar</button>
+              </div>
             </div>
 
-            <div class="rutina">
-              <h3>RUTINA DE PECHO/BICEPS</h3>
-              <p>Objetivo: hipertografía pecho y tríceps</p>
-              <ul>
-                <li>Press de banca</li>
-                <li>Curl de bíceps</li>
-                <li>Press inclinado</li>
-              </ul>
-              <button class="btn editar"><i class='bx bx-edit'></i>Modificar</button>
-              <button class="btn eliminar"><i class='bx bx-trash'></i>Eliminar</button>
+            <!-- Resumen de datos -->
+            <div class="resumen-datos">
+              <h3>RESUMEN DE DATOS</h3>
+              <p>Objetivo: <span class="destacar">{{ objetivo }}</span></p>
+              <p>Altura: <span class="destacar">{{ altura }} cm</span></p>
+              <p>Peso: <span class="destacar">{{ peso }} Kg</span></p>
+              <p>IMC (Inidce de masa corporal): <span class="destacar">{{ imc.toFixed(2) }}</span></p>
+              <p>Rango de peso: <span class="destacar">{{ clasificacion }}</span></p>
+            </div>
+
+            <!-- Recomendaciones de Salud -->
+            <div class="recomendaciones-salud">
+              <h3>RECOMENDACIONES DE SALUD</h3>
+              <p>{{ recomendacion }}</p>
             </div>
           </div>
-
-          <!-- Resumen de datos -->
-          <div class="resumen-datos">
-            <h3>RESUMEN DE DATOS</h3>
-            <p>Objetivo: <span class="destacar">{{ objetivo }}</span></p>
-            <p>Altura: <span class="destacar">{{ altura }} cm</span></p>
-            <p>Peso: <span class="destacar">{{ peso }} Kg</span></p>
-            <p>IMC (Inidce de masa corporal): <span class="destacar">{{ imc.toFixed(2) }}</span></p>
-            <p>Rango de peso: <span class="destacar">{{ clasificacion }}</span></p>
+          <div class="centrar">
+            <button class="boton-continuar" @click="goToPrincipal">Continuar</button>
           </div>
-
-          <!-- Recomendaciones de Salud -->
-          <div class="recomendaciones-salud">
-            <h3>RECOMENDACIONES DE SALUD</h3>
-            <p>{{ recomendacion }}</p>
-          </div>
-        </div>
-        <div class="centrar">
-          <button class="boton-continuar" @click="goToPrincipal">Continuar</button>
         </div>
       </div>
     </div>
@@ -204,6 +251,7 @@ export default {
 
 .rutina {
   background-color: #2c2c2c;
+  margin-top: 10px;
   padding: 20px;
   border-radius: 10px;
   text-align: left;
