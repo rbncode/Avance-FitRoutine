@@ -21,3 +21,49 @@
 </template>
 
 
+<style scoped>
+
+.exercises {
+    padding: 40px 20px;
+    text-align: center;
+    color: #000;
+    background-color: #0D0E16;
+}
+
+.exercises h2 {
+    color: white;
+    font-size: 32px;
+}
+
+.exercise-grid {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.exercise-item {
+    width: 30%;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+
+    border-radius: 5px;
+    padding: 15px;
+
+}
+
+.exercise-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+    border-radius: 20px;
+
+}
+
+.exercise-item h3 {
+    margin-top: 10px;
+    font-size: 18px;
+    color: #e3e3e3;
+}
+
+</style>
