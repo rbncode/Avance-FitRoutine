@@ -1,44 +1,40 @@
-<script>
+<script setup>
+import { ref, onMounted, defineProps } from "vue";
 import axios from "axios";
+import BotonRojo from "@/components/BotonRojo.vue";
 
-export default {
-  props: ["id"],
-  data() {
-    return {
-      rutina: {
-        ejercicios: [],
-      },
-    };
-  },
-  created() {
-    this.cargarDetalleRutina();
-    console.log("Routine ID:", this.id);
-  },
-  methods: {
-    cargarDetalleRutina() {
-      axios
-        .get(`http://localhost:3000/rutinas/${this.id}`)
-        .then((response) => {
-          this.routine = response.data;
-        })
-        .catch((error) => {
-          console.error(error);
-        });
-    },
-  },
+const props = defineProps({
+  id: String,
+});
+
+const rutina = ref({
+  ejercicios: [],
+});
+
+const cargarDetalleRutina = () => {
+  axios
+    .get(`http://localhost:3000/rutinas/${props.id}`)
+    .then((response) => {
+      rutina.value = response.data;
+    })
+    .catch((error) => {
+      console.error(error);
+    });
 };
+
+onMounted(() => {
+  cargarDetalleRutina();
+  console.log("rutina ID:", props.id);
+});
 </script>
 
 <template>
   <main>
     <div class="volver">
-      <button class="volver-btn" onclick="history.back()" id="back-button">
-        Volver
-      </button>
+      <BotonRojo link="/Rutinas" />
     </div>
-    <h1 style="text-align: center">RUTINAS</h1>
-    <h2 style="text-align: center">Nombre de Rutina</h2>
     <div class="info-rutina">
+      <h2 style="text-align: center">{{ rutina.nombre }}</h2>
       <table>
         <thead>
           <tr>
@@ -63,17 +59,36 @@ export default {
   </main>
 </template>
 <style scoped>
+main {
+  padding: min(30px, 7%);
+  background-color: #0f1017;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  grid-template-areas:
+    "navbar"
+    "main";
+}
+
+h2 {
+  color: white;
+  margin: 0;
+  padding: 10px 0; /* Adjust this padding as necessary */
+  text-align: center;
+}
+
 .info-rutina {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin-top: 20px; /* Reduce the margin-top to decrease the spacing */
 }
 
 .info-rutina table {
   border-radius: 10px;
   width: 50%;
-  margin: 0 auto;
-  height: 20%;
+  margin: 10px 0; /* Add some margin to create space between the heading and the table */
+  height: auto;
 }
 
 .info-rutina th {
