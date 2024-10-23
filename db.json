@@ -1,0 +1,92 @@
+{
+  "rutinas": [
+    {
+      "id": "r1",
+      "nombre": "Rutina de Pecho y Tren Superior",
+      "descripcion": "Rutina enfocada en el desarrollo de la parte superior del cuerpo.",
+      "nivelDificultad": "Intermedio",
+      "grupoMuscular": "Tren Superior",
+      "ejercicios": [
+        {
+          "id": "1",
+          "nombre": "Press de Banca",
+          "descripcion": "Ejercicio para trabajar el pecho.",
+          "instrucciones": "Acostado en una banca, baja la barra de forma controlada hasta el pecho y luego empújala de regreso hacia arriba.",
+          "pesoRecomendado": 80,
+          "grupoMuscular": "Tren Superior",
+          "imagen": "/src/views/lista-ejercicios/img-ejercicios/press-banca.gif",
+          "repeticiones": 10,
+          "series": 4,
+          "descanso": 90
+        },
+        {
+          "id": "db49",
+          "nombre": "Press Militar",
+          "descripcion": "Ejercicio para trabajar los hombros y el tren superior.",
+          "instrucciones": "De pie, levanta una barra desde la clavícula hacia arriba hasta que los brazos estén completamente extendidos.",
+          "pesoRecomendado": 20,
+          "grupoMuscular": "Tren Superior",
+          "imagen": "/src/views/lista-ejercicios/img-ejercicios/press-militar.jpg",
+          "repeticiones": 12,
+          "series": 3,
+          "descanso": 60
+        }
+      ]
+    },
+    {
+      "id": "r2",
+      "nombre": "Rutina de Core",
+      "descripcion": "Rutina diseñada para fortalecer el core.",
+      "nivelDificultad": "Principiante",
+      "grupoMuscular": "Core",
+      "ejercicios": [
+        {
+          "id": "6ff6",
+          "nombre": "Plancha",
+          "descripcion": "Ejercicio isométrico que trabaja el core.",
+          "instrucciones": "Mantén el cuerpo recto y soporta tu peso sobre los antebrazos y las puntas de los pies durante el tiempo que puedas.",
+          "pesoRecomendado": 2,
+          "grupoMuscular": "Core",
+          "imagen": "/src/views/lista-ejercicios/img-ejercicios/fondos-parelelas.jpg",
+          "repeticiones": 1,
+          "series": 3,
+          "descanso": 45,
+          "duracion": "30 segundos"
+        }
+      ]
+    },
+    {
+      "id": "r3",
+      "nombre": "Rutina de Piernas",
+      "descripcion": "Rutina enfocada en el tren inferior.",
+      "nivelDificultad": "Avanzado",
+      "grupoMuscular": "Tren Inferior",
+      "ejercicios": [
+        {
+          "id": "adcf",
+          "nombre": "Sentadilla",
+          "descripcion": "Ejercicio básico para fortalecer el tren inferior.",
+          "instrucciones": "Con los pies al ancho de los hombros, baja en cuclillas manteniendo la espalda recta y luego vuelve a subir.",
+          "pesoRecomendado": 25,
+          "grupoMuscular": "Tren Inferior",
+          "imagen": "/src/views/lista-ejercicios/img-ejercicios/sentadilla.jpg",
+          "repeticiones": 15,
+          "series": 4,
+          "descanso": 90
+        },
+        {
+          "id": "daf2",
+          "nombre": "Peso Muerto",
+          "descripcion": "Ejercicio para trabajar la cadena posterior del tren inferior.",
+          "instrucciones": "Levanta la barra desde el suelo manteniendo la espalda recta y extendiendo las caderas y las rodillas.",
+          "pesoRecomendado": 50,
+          "grupoMuscular": "Tren Inferior",
+          "imagen": "/src/views/lista-ejercicios/img-ejercicios/peso-muerto.jpg",
+          "repeticiones": 10,
+          "series": 3,
+          "descanso": 120
+        }
+      ]
+    }
+  ]
+}
