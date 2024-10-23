@@ -19,3 +19,42 @@
 </template>
 
 
+<script >
+import { createUsuario } from '@/services/todoService';
+export default {
+    data() {
+        return {
+            nuevoUsuario: {
+                nombre: '',
+                email: '',
+                edad: null,
+                password: ''
+            }
+        };
+    },
+    methods: {
+        async guardarUsuario() {
+            try {
+                const usuarioCreado = await createUsuario(this.nuevoUsuario);
+                console.log('Usuario creado:', usuarioCreado);
+                this.$router.push('/Login')
+            } catch (error) {
+                console.error('Error al crear el usuario:', error.message);
+            }
+        },
+
+        cancelar() {
+
+            this.nuevoUsuario = {
+                nombre: '',
+                email: '',
+                edad: null,
+                password: ''
+            };
+        }
+    }
+};
+
+</script>
+
+
