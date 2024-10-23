@@ -1,39 +1,37 @@
-<script>
+<script setup>
+import { ref, onMounted, defineProps } from "vue";
 import axios from "axios";
-import BotonVuelta from "@/components/BotonVuelta.vue";
+import BotonRojo from "@/components/BotonRojo.vue";
 
-export default {
-  props: ["id"],
-  data() {
-    return {
-      rutina: {
-        ejercicios: [],
-      },
-    };
-  },
-  created() {
-    this.cargarDetalleRutina();
-    console.log("Routine ID:", this.id);
-  },
-  methods: {
-    cargarDetalleRutina() {
-      axios
-        .get(`http://localhost:3000/rutinas/${this.id}`)
-        .then((response) => {
-          this.rutina = response.data;
-        })
-        .catch((error) => {
-          console.error(error);
-        });
-    },
-  },
+const props = defineProps({
+  id: String,
+});
+
+const rutina = ref({
+  ejercicios: [],
+});
+
+const cargarDetalleRutina = () => {
+  axios
+    .get(`http://localhost:3000/rutinas/${props.id}`)
+    .then((response) => {
+      rutina.value = response.data;
+    })
+    .catch((error) => {
+      console.error(error);
+    });
 };
+
+onMounted(() => {
+  cargarDetalleRutina();
+  console.log("rutina ID:", props.id);
+});
 </script>
 
 <template>
   <main>
     <div class="volver">
-      <BotonVuelta />
+      <BotonRojo link="/Rutinas" />
     </div>
     <div class="info-rutina">
       <h2 style="text-align: center">{{ rutina.nombre }}</h2>
