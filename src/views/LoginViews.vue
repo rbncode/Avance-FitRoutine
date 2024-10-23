@@ -63,7 +63,12 @@ export default {
 
                 if (usuario) {
                     localStorage.setItem("usuarioLogeado", JSON.stringify(usuario));
+
+                    if(usuario.rol === 'administrador'){
+                        this.$router.push('/AdminRegistro');
+                    }else {
                     this.$router.push('/'); //redirige a la pagina principal
+                    }
                 } else {
                     this.error = true;
                     this.error_mensaje = 'Correo electrónico o contraseña incorrectos.';
