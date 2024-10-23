@@ -15,12 +15,12 @@ import { RouterLink } from "vue-router";
         <a href="#" class="dropdown-toggle">Ejercicios</a>
         <ul class="dropdown-menu">
           <li>
-            <RouterLink to="/">Tren Superior</RouterLink>
+            <RouterLink to="/ListaTrenS">Tren Superior</RouterLink>
           </li>
           <li>
-            <RouterLink to="/">Tren Inferior</RouterLink>
+            <RouterLink to="/ListaTrenI">Tren Inferior</RouterLink>
           </li>
-          <li><RouterLink to="/">Core</RouterLink></li>
+          <li><RouterLink to="/ListaCore">Core</RouterLink></li>
         </ul>
       </li>
       <li><a href="/">Cerrar Sesion</a></li>
