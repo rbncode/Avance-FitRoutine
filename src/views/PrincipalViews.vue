@@ -29,3 +29,7 @@
 </template>
 
 
+<script setup>
+import EjerciciosComponente from '@/components/EjerciciosComponente.vue';
+</script>
+
