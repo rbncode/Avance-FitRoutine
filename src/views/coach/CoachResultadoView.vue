@@ -12,7 +12,8 @@ export default {
       recomendacion: '',
       iaCargando: true,
       net: new NeuralNetwork(),
-      router: useRouter()
+      router: useRouter(),
+      objetivo: localStorage.getItem('objetivo') || 'No definido',
     };
   },
   mounted() {
@@ -44,7 +45,7 @@ export default {
 
       this.iaCargando = false;
       this.calcularIMC();
-    }, 2000); 
+    }, 2000);
   },
   methods: {
     calcularIMC() {
@@ -76,7 +77,7 @@ export default {
 
       return recomendaciones[clasificacion];
     },
-    goToPrincipal(){
+    goToPrincipal() {
       this.router.push('/');
     }
   }
@@ -139,7 +140,7 @@ export default {
           <!-- Resumen de datos -->
           <div class="resumen-datos">
             <h3>RESUMEN DE DATOS</h3>
-            <p>Objetivo: <span class="destacar">Ganar masa muscular</span></p>
+            <p>Objetivo: <span class="destacar">{{ objetivo }}</span></p>
             <p>Altura: <span class="destacar">{{ altura }} cm</span></p>
             <p>Peso: <span class="destacar">{{ peso }} Kg</span></p>
             <p>IMC (Inidce de masa corporal): <span class="destacar">{{ imc.toFixed(2) }}</span></p>
