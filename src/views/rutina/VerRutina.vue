@@ -1,12 +1,16 @@
 <script setup>
-import { ref, onMounted, defineProps } from "vue";
+import { ref, onMounted, defineProps, computed } from "vue";
+import { useRoute } from "vue-router";
 import axios from "axios";
 import BotonRojo from "@/components/BotonRojo.vue";
 import BotonGris from "@/components/BotonGris.vue";
 
 const props = defineProps({
   id: String,
+  rutina: Object,
 });
+
+const route = useRoute();
 
 const rutina = ref({
   ejercicios: [],
@@ -23,6 +27,10 @@ const cargarDetalleRutina = () => {
     });
 };
 
+const returnLink = computed(() => {
+  return route.query.from || "/Rutinas";
+});
+
 onMounted(() => {
   cargarDetalleRutina();
   console.log("rutina ID:", props.id);
@@ -32,7 +40,7 @@ onMounted(() => {
 <template>
   <main>
     <div class="volver">
-      <BotonRojo link="/Rutinas" />
+      <BotonRojo :link="returnLink" />
     </div>
     <div class="info-rutina">
       <h2 style="text-align: center">{{ rutina.nombre }}</h2>
