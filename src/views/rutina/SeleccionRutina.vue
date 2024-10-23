@@ -1,4 +1,37 @@
-<script></script>
+<script setup>
+import TarjetaRutina from "@/components/TarjetaRutina.vue";
+import axios from "axios";
+import { ref, computed, onMounted } from "vue";
+
+const rutinas = ref([]);
+const selectedLevel = ref(null);
+const selectedMuscleGroup = ref(null);
+
+const cargarRutinas = async () => {
+  try {
+    const res = await axios.get("http://localhost:3000/rutinas");
+    rutinas.value = res.data;
+  } catch (error) {
+    console.error("Error al cargar las rutinas:", error);
+  }
+};
+
+const filtrarRutinas = computed(() => {
+  return rutinas.value.filter((rutina) => {
+    const matchesLevel = selectedLevel.value
+      ? rutina.nivelDificultad === selectedLevel.value
+      : true;
+    const matchesMuscleGroup = selectedMuscleGroup.value
+      ? rutina.muscleGroup === selectedMuscleGroup.value
+      : true;
+    return matchesLevel && matchesMuscleGroup;
+  });
+});
+
+onMounted(() => {
+  cargarRutinas();
+});
+</script>
 
 <template>
   <main>
@@ -30,8 +63,8 @@
       </div>
 
       <div class="resultados">
-        <div v-for="(rutina, index) in rutinas" :key="index">
-          <RoutineCard :rutina="rutina" />
+        <div v-for="(rutina, index) in filtrarRutinas" :key="index">
+          <TarjetaRutina :rutina="rutina" />
         </div>
       </div>
 
