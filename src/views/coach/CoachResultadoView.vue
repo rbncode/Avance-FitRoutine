@@ -119,67 +119,55 @@ export default {
                 <ul>
                   <li>Sentadillas</li>
                   <li>Press de banca</li>
-                  <li>Dominadas</li>
+                  <li>Sentadilla con Barra</li>
                 </ul>
-                <button class="btn editar"><i class='bx bx-edit'></i>Modificar</button>
-                <button class="btn eliminar"><i class='bx bx-trash'></i>Eliminar</button>
               </div>
 
               <div v-if="objetivo === 'Ganar masa muscular'" class="rutina">
                 <h3>RUTINA 2 - Ganar Masa Muscular</h3>
                 <ul>
-                  <li>Press militar</li>
-                  <li>Remo con barra</li>
-                  <li>Flexiones</li>
+                  <li>Remo de 90° Abierto con Mancuerna</li>
+                  <li>Remo Horizontal con Mancuerna</li>
+                  <li>Curl de Biceps con Mancuerna</li>
                 </ul>
-                <button class="btn editar"><i class='bx bx-edit'></i>Modificar</button>
-                <button class="btn eliminar"><i class='bx bx-trash'></i>Eliminar</button>
               </div>
 
               <!-- Rutinas para Perder Peso -->
-              <div v-if="objetivo === 'Perder peso'" class="rutina">
+              <div v-if="objetivo === 'Bajar de Peso'" class="rutina">
                 <h3>RUTINA 1 - Perder Peso</h3>
                 <ul>
                   <li>Correr 30 minutos</li>
-                  <li>Burpees</li>
-                  <li>Jumping jacks</li>
+                  <li>Sentadilla</li>
+                  <li>Abdominal con Giro</li>
                 </ul>
-                <button class="btn editar"><i class='bx bx-edit'></i>Modificar</button>
-                <button class="btn eliminar"><i class='bx bx-trash'></i>Eliminar</button>
               </div>
 
-              <div v-if="objetivo === 'Perder peso'" class="rutina">
+              <div v-if="objetivo === 'Bajar de Peso'" class="rutina">
                 <h3>RUTINA 2 - Perder Peso</h3>
                 <ul>
-                  <li>Bicicleta estática</li>
-                  <li>Plancha abdominal</li>
-                  <li>Mountain climbers</li>
+                  <li>Plancha</li>
+                  <li>Patadas de Tijera</li>
+                  <li>Abdominales Bicicleta</li>
                 </ul>
-                <button class="btn editar"><i class='bx bx-edit'></i>Modificar</button>
-                <button class="btn eliminar"><i class='bx bx-trash'></i>Eliminar</button>
               </div>
 
               <!-- Rutinas para Ganar Fuerza -->
               <div v-if="objetivo === 'Ganar fuerza'" class="rutina">
                 <h3>RUTINA 1 - Ganar Fuerza</h3>
                 <ul>
-                  <li>Peso muerto</li>
-                  <li>Press de banca pesado</li>
-                  <li>Sentadilla frontal</li>
+                  <li>Sentadilla con Barra</li>
+                  <li>Press de banca</li>
+                  <li>Remo de 90° Abierto con Mancuerna</li>
                 </ul>
-                <button class="btn editar"><i class='bx bx-edit'></i>Modificar</button>
-                <button class="btn eliminar"><i class='bx bx-trash'></i>Eliminar</button>
               </div>
 
               <div v-if="objetivo === 'Ganar fuerza'" class="rutina">
                 <h3>RUTINA 2 - Ganar Fuerza</h3>
                 <ul>
-                  <li>Press militar pesado</li>
-                  <li>Remo con barra pesado</li>
-                  <li>Dominadas con peso</li>
+                  <li>Peso Muerto</li>
+                  <li>Curl de Bicep con Barra</li>
+                  <li>Curl de Biceps con Mancuerna</li>
                 </ul>
-                <button class="btn editar"><i class='bx bx-edit'></i>Modificar</button>
-                <button class="btn eliminar"><i class='bx bx-trash'></i>Eliminar</button>
               </div>
             </div>
 
