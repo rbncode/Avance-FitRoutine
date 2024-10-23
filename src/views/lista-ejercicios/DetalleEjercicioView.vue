@@ -126,7 +126,7 @@ onMounted(cargarEjercicio);
 .demo h3 {
     background-color: #121212;
     color: #ffffff;
-    font-size: 2rem;
+    font-size: 1.8rem;
     padding-left: 7%;
     margin: 0 -1%;
     border-radius: 5%;
