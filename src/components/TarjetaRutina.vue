@@ -1,0 +1,71 @@
+<script setup>
+import { defineProps } from "vue";
+import { useRouter } from "vue-router";
+
+const props = defineProps({
+  rutina: {
+    type: Object,
+    required: true,
+  },
+});
+
+const router = useRouter();
+
+const goTo = (page) => {
+  router.push(page);
+};
+
+const guardarRutina = () => {
+  axios
+    .post("http://localhost:3000/rutinaGuardadas", props.rutina)
+    .then((response) => {
+      console.log("Rutina guardada:", response.data);
+      mostrarGuardado.value = false;
+    })
+    .catch((error) => {
+      console.error("Error al guardar la rutina:", error);
+    });
+};
+</script>
+
+<template>
+  <div class="routine">
+    <h2>{{ rutina.nombre }}</h2>
+    <p><strong>Objetivo:</strong> {{ rutina.objetivo }}</p>
+    <p>{{ rutina.descripcion }}</p>
+
+    <RouterLink :to="{ name: 'informacion-rutina', params: { id: rutina.id } }"
+      >Ver Más</RouterLink
+    >
+    <button class="save-routine" v-if="mostrarGuardado" @click="guardarRutina">
+      Guardar
+    </button>
+  </div>
+</template>
+
+<style scoped>
+main,
+h1 {
+  color: var(--text-clr);
+  align-items: center;
+}
+
+.routine {
+  border: 1px solid var(--line-clr);
+  background-color: #fff;
+  color: var(--secondary-text-clr);
+  border-radius: 1em;
+  margin-bottom: 20px;
+  padding: min(3em, 15%);
+}
+
+h1 {
+  display: flex;
+  align-items: center;
+  margin: 30px;
+  justify-content: center;
+  padding: 0 20px;
+  flex-grow: 1;
+  text-align: center;
+}
+</style>
