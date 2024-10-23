@@ -27,6 +27,7 @@ const router = createRouter({
       path: "/ver-rutina/:id",
       name: "informacion-rutina",
       component: VerRutina,
+      props: true,
     },
   ],
 });
