@@ -44,4 +44,29 @@ export default {
   </div>
 </template>
 
-<style></style>
+<style scoped>
+.container {
+  min-width: 600px;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.add-routine {
+  display: flex;
+  width: 180px;
+  height: 50px;
+  padding: 3px 21px;
+  justify-content: center;
+  background: #ad283d;
+  border: none;
+  color: #fff;
+  font-weight: 400;
+  align-items: center;
+  gap: 10px;
+  border-radius: 10px;
+  flex-shrink: 0;
+  text-decoration: none;
+}
+</style>
