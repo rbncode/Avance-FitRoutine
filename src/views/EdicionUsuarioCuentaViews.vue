@@ -27,3 +27,49 @@
 </template>
 
 
+<script>
+
+import { getUsuarioByID, editUsuario } from '@/services/todoService';
+
+export default {
+
+
+ 
+    data() {
+        return {
+            usuario: {
+                nombre: '',
+                email: '',
+                edad: null,
+                password: ''
+            },
+            usuarioID: this.$route.params.id 
+        };
+    },
+    async mounted() {
+        await this.cargarUsuario();
+    },
+    methods: {
+        async cargarUsuario() {
+            try {
+                const usuarioData = await getUsuarioByID(this.usuarioID);
+                this.usuario = usuarioData;
+            } catch (error) {
+                console.error('Error al cargar el usuario:', error.message);
+            }
+        },
+        async guardarCambios() {
+            try {
+                const usuarioActualizado = await editUsuario(this.usuarioID, this.usuario);
+                console.log('Usuario actualizado:', usuarioActualizado);
+            
+            } catch (error) {
+                console.error('Error al guardar los cambios:', error.message);
+            }
+        }
+    }
+};
+</script>
+
+
+
