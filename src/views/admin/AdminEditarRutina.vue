@@ -7,18 +7,35 @@ export default {
       descripcion: "",
       nivelDificultad: "",
       grupoMuscular: "",
+      ejerciciosDisponibles: [],
       ejercicios: [],
     };
   },
   methods: {
+    async cargarEjercicios() {
+      try {
+        const res = await fetch("http://localhost:3000/ejercicios");
+        this.ejerciciosDisponibles = await res.json();
+      } catch (error) {
+        console.error("Error al obtener los ejercicios:", error);
+      }
+    },
+    agregarEjercicio() {
+      const ejercicio = this.ejerciciosDisponibles.find(
+        (ej) => ej.nombre === this.ejercicioSeleccionado
+      );
+      if (ejercicio && !this.ejercicios.includes(ejercicio)) {
+        this.ejercicios.push(ejercicio);
+      }
+    },
     async guardarRutina() {
-      const nuevoRutina = {
+      const nuevaRutina = {
         nombre: this.nombre,
         objetivo: this.objetivo,
         descripcion: this.descripcion,
         nivelDificultad: this.nivelDificultad,
         grupoMuscular: this.grupoMuscular,
-        ejercicios: [],
+        ejercicios: this.ejercicios,
       };
 
       try {
@@ -31,7 +48,7 @@ export default {
         });
 
         if (res.ok) {
-          this.$router.push("/admin-lista-rutinas");
+          this.$router.push("/AdminListaRutinas");
         } else {
           alert("Error al guardar la rutina");
         }
@@ -47,7 +64,7 @@ export default {
 <template>
   <div class="container">
     <form @submit.prevent="guardarRutina">
-      <h2 class="form-header">Registro de Nuevo Ejercicio</h2>
+      <h2 class="form-header">Registro de Nueva Rutina</h2>
       <div class="form-row">
         <div class="left">
           <!-- Campos de texto -->
@@ -85,17 +102,24 @@ export default {
               <option value="Tren Inferior">Tren Inferior</option>
             </select>
           </div>
-          <div class="ejercicios">
-            <select required>
-              <option
-                v-for="ejercicio in rutina.ejercicios"
-                :key="ejercicio.id"
-              >
-                {{ ejercicio.nombre }}
-              </option>
-            </select>
-            <button class="add-exercise" type="submit">Añadir Ejercicio</button>
-          </div>
+          <select v-model="ejercicioSeleccionado" required>
+            <option value="" disabled>Seleccionar ejercicio</option>
+            <option
+              v-for="ejercicio in ejerciciosDisponibles"
+              :key="ejercicio.id"
+              :value="ejercicio.nombre"
+            >
+              {{ ejercicio.nombre }}
+            </option>
+          </select>
+          <button class="add-exercise" type="button" @click="agregarEjercicio">
+            Añadir Ejercicio
+          </button>
+          <ul>
+            <li v-for="(ejercicio, index) in ejercicios" :key="index">
+              {{ ejercicio.nombre }}
+            </li>
+          </ul>
         </div>
       </div>
 
