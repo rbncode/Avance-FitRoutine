@@ -42,3 +42,30 @@ const guardarRutina = () => {
     </button>
   </div>
 </template>
+
+<style scoped>
+main,
+h1 {
+  color: var(--text-clr);
+  align-items: center;
+}
+
+.routine {
+  border: 1px solid var(--line-clr);
+  background-color: #fff;
+  color: var(--secondary-text-clr);
+  border-radius: 1em;
+  margin-bottom: 20px;
+  padding: min(3em, 15%);
+}
+
+h1 {
+  display: flex;
+  align-items: center;
+  margin: 30px;
+  justify-content: center;
+  padding: 0 20px;
+  flex-grow: 1;
+  text-align: center;
+}
+</style>
