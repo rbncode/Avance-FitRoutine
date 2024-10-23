@@ -14,7 +14,6 @@ const esAdmin = () => {
 </script>
 
 <template>
-
   <body class="principal">
     <div v-if="esAdmin()" class="admin-view">
       <NavBarAdmin />

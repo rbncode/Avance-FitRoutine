@@ -31,7 +31,7 @@ export default {
 
         <ul class="menu">
 
-            <li><a v-on:click="goTo('/')" class="enlace"><i
+            <li><a v-on:click="goTo('/AdminRegistro')" class="enlace"><i
                         class='bx bx-user-plus'></i>Registro</a>
             </li>
             <li><a v-on:click="goTo('/')" class="enlace"><i
@@ -40,7 +40,7 @@ export default {
             <li><a v-on:click="goTo('/AdminListaEjercicios')" class="enlace"><i
                         class='bx bx-dumbbell'></i>Ejercicios</a>
             </li>
-            <li><a v-on:click="goTo('/')" class="enlace"><i class='bx bx-group'></i>Usuarios</a></li>
+            <li><a v-on:click="goTo('/AdminListaUsuarios')" class="enlace"><i class='bx bx-group'></i>Usuarios</a></li>
             <li><a v-on:click="goTo('/')" class="enlace"><i class='bx bx-log-out'></i>Cerrar Sesión</a></li>
         </ul>
     </nav>
