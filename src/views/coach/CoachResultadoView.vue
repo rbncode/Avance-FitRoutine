@@ -121,8 +121,6 @@ export default {
                   <li>Press de banca</li>
                   <li>Sentadilla con Barra</li>
                 </ul>
-                <button class="btn editar"><i class='bx bx-edit'></i>Modificar</button>
-                <button class="btn eliminar"><i class='bx bx-trash'></i>Eliminar</button>
               </div>
 
               <div v-if="objetivo === 'Ganar masa muscular'" class="rutina">
@@ -132,8 +130,6 @@ export default {
                   <li>Remo Horizontal con Mancuerna</li>
                   <li>Curl de Biceps con Mancuerna</li>
                 </ul>
-                <button class="btn editar"><i class='bx bx-edit'></i>Modificar</button>
-                <button class="btn eliminar"><i class='bx bx-trash'></i>Eliminar</button>
               </div>
 
               <!-- Rutinas para Perder Peso -->
@@ -144,8 +140,6 @@ export default {
                   <li>Sentadilla</li>
                   <li>Abdominal con Giro</li>
                 </ul>
-                <button class="btn editar"><i class='bx bx-edit'></i>Modificar</button>
-                <button class="btn eliminar"><i class='bx bx-trash'></i>Eliminar</button>
               </div>
 
               <div v-if="objetivo === 'Bajar de Peso'" class="rutina">
@@ -155,8 +149,6 @@ export default {
                   <li>Patadas de Tijera</li>
                   <li>Abdominales Bicicleta</li>
                 </ul>
-                <button class="btn editar"><i class='bx bx-edit'></i>Modificar</button>
-                <button class="btn eliminar"><i class='bx bx-trash'></i>Eliminar</button>
               </div>
 
               <!-- Rutinas para Ganar Fuerza -->
@@ -167,8 +159,6 @@ export default {
                   <li>Press de banca</li>
                   <li>Remo de 90° Abierto con Mancuerna</li>
                 </ul>
-                <button class="btn editar"><i class='bx bx-edit'></i>Modificar</button>
-                <button class="btn eliminar"><i class='bx bx-trash'></i>Eliminar</button>
               </div>
 
               <div v-if="objetivo === 'Ganar fuerza'" class="rutina">
@@ -178,8 +168,6 @@ export default {
                   <li>Curl de Bicep con Barra</li>
                   <li>Curl de Biceps con Mancuerna</li>
                 </ul>
-                <button class="btn editar"><i class='bx bx-edit'></i>Modificar</button>
-                <button class="btn eliminar"><i class='bx bx-trash'></i>Eliminar</button>
               </div>
             </div>
 
