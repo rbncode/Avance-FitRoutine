@@ -7,6 +7,7 @@ export default {
       descripcion: "",
       nivelDificultad: "",
       grupoMuscular: "",
+      ejercicios: [],
     };
   },
   methods: {
