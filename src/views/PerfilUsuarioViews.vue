@@ -20,3 +20,37 @@
 </div>
 </template>
 
+<script>
+export default {
+    data() {
+        return {
+            usuario: {
+                nombre: '',
+                email: '',
+                password: '',
+                edad: null
+
+            },
+        };
+    },
+
+    mounted() {
+        this.cargarUsuario();
+    },
+    methods: {
+        cargarUsuario() {
+            const usuarioLogeado = JSON.parse(localStorage.getItem('usuarioLogeado'));
+            if (usuarioLogeado) {
+                this.usuario = usuarioLogeado;
+            } else {
+                console.error('No hay usuario logueado.');
+                this.$router.push('/Login');
+            }
+        },
+        editarPerfil() {
+            this.$router.push(`/EdicionUsuario/${this.usuario.id}`);
+        },
+    },
+};
+</script>
+
