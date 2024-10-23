@@ -28,3 +28,55 @@
     </footer>
 </template>
 
+<style scoped>
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+}
+
+.footer-content {
+    padding: 20px;
+}
+
+.footer-title .logo-footer {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.footer-title .logo-footer::before,
+.footer-title .logo-footer::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 80px;
+    height: 2px;
+    background-color: #fff;
+}
+
+.footer-title .logo-footer::before {
+    left: -100px;
+}
+
+.footer-title .logo-footer::after {
+    right: -100px;
+}
+
+.footer-info {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 10px;
+}
+
+.footer-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+footer p {
+    margin: 0;
+}
+</style>
