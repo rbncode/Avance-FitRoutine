@@ -119,7 +119,7 @@ const enviarDatos = () => {
     padding: 20px;
     margin: 8px auto;
     width: 90%;
-    max-width: 1000px;
+    max-width: 1200px;
     background-color: #212121;
     color: white;
     border-radius: 10px;
@@ -151,7 +151,7 @@ const enviarDatos = () => {
 }
 
 .option img {
-    width: 100%;
+    height: 200px;
     margin-bottom: 10px;
 }
 
@@ -180,12 +180,12 @@ const enviarDatos = () => {
 }
 
 .sexo-options input[type="radio"] {
-    margin-right: 5px;
+    margin: 20px 5px 0 0;
 }
 
 .sexo-options label {
     font-size: 1em;
-    margin: 0 10px 0 5px
+    margin: 20px 10px 0 5px
 }
 
 .boton-continuar{
