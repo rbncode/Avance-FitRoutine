@@ -1,7 +1,6 @@
 <script setup>
 import { defineProps, ref } from "vue";
-import { useRouter, useRoute } from "vue-router";
-import axios from "axios";
+import { useRouter } from "vue-router";
 
 const props = defineProps({
   rutina: {
@@ -11,26 +10,36 @@ const props = defineProps({
 });
 
 const router = useRouter();
-const route = useRoute();
 const mostrarGuardado = ref(true);
 
-const esVistaRutinas = ref(route.name === "rutinas");
+const guardarRutina = async () => {
+  const nuevaRutina = {
+    nombre: props.rutina.nombre,
+    descripcion: props.rutina.descripcion,
+    nivelDificultad: props.rutina.nivelDificultad,
+    grupoMuscular: props.rutina.grupoMuscular,
+    ejercicios: props.rutina.ejercicios,
+  };
 
-const guardarRutina = () => {
-  console.log("Rutina a guardar:", props.rutina);
-
-  axios
-    .post("http://localhost:3000/rutinaGuardadas", props.rutina)
-    .then((response) => {
-      console.log("Rutina guardada:", response.data);
-      mostrarGuardado.value = false;
-    })
-    .catch((error) => {
-      console.error(
-        "Error al guardar la rutina:",
-        error.response ? error.response.data : error.message
-      );
+  try {
+    const res = await fetch("http://localhost:3000/rutinasGuardadas", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(nuevaRutina),
     });
+
+    if (!res.ok) {
+      throw new Error(`Error: ${res.status}`);
+    }
+
+    const data = await res.json();
+    console.log("Rutina guardada:", data);
+    mostrarGuardado.value = false; // Oculta el botón después de guardar
+  } catch (error) {
+    console.error("Error al guardar la rutina:", error);
+  }
 };
 </script>
 
