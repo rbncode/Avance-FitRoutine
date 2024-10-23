@@ -206,6 +206,132 @@
           "descanso": 120
         }
       ]
+    },
+    {
+      "id": "gmm1",
+      "nombre": "Rutina de Pecho y Bíceps",
+      "descripcion": "Entrenamiento enfocado en desarrollar masa muscular en el pecho y bíceps.",
+      "nivelDificultad": "Intermedio",
+      "grupoMuscular": "Tren Superior",
+      "ejercicios": [
+        {
+          "id": "1",
+          "nombre": "Press de Banca"
+        },
+        {
+          "id": "414f",
+          "nombre": "Curl de Bicep con Barra"
+        },
+        {
+          "id": "6a67",
+          "nombre": "Curl de Biceps con Mancuerna"
+        }
+      ]
+    },
+    {
+      "id": "gmm2",
+      "nombre": "Rutina de Piernas",
+      "descripcion": "Entrenamiento centrado en el desarrollo muscular de las piernas.",
+      "nivelDificultad": "Intermedio",
+      "grupoMuscular": "Tren Inferior",
+      "ejercicios": [
+        {
+          "id": "7c05",
+          "nombre": "Sentadilla con Barra"
+        },
+        {
+          "id": "f46c",
+          "nombre": "Estocada con Barra"
+        },
+        {
+          "id": "43d5",
+          "nombre": "Peso Muerto"
+        }
+      ]
+    },
+    {
+      "id": "gp1",
+      "nombre": "Circuito Quema Calorías",
+      "descripcion": "Entrenamiento de alta intensidad para mejorar el metabolismo y perder peso.",
+      "nivelDificultad": "Intermedio",
+      "grupoMuscular": "Cuerpo Completo",
+      "ejercicios": [
+        {
+          "id": "ef90",
+          "nombre": "Abdominales Bicicleta"
+        },
+        {
+          "id": "5855",
+          "nombre": "Patadas de Tijera"
+        },
+        {
+          "id": "d1a8",
+          "nombre": "Sentadilla (peso corporal)"
+        }
+      ]
+    },
+    {
+      "id": "gp2",
+      "nombre": "Rutina de Fuerza y Resistencia",
+      "descripcion": "Entrenamiento de resistencia para fortalecer el tren superior y el core.",
+      "nivelDificultad": "Intermedio",
+      "grupoMuscular": "Core y Tren Superior",
+      "ejercicios": [
+        {
+          "id": "0b0d",
+          "nombre": "Plancha"
+        },
+        {
+          "id": "f0ae",
+          "nombre": "Remo Horizontal con Mancuerna"
+        },
+        {
+          "id": "9e72",
+          "nombre": "Abdominal con Giro"
+        }
+      ]
+    },
+    {
+      "id": "gf1",
+      "nombre": "Entrenamiento de Fuerza para Piernas",
+      "descripcion": "Ejercicios enfocados en aumentar la fuerza de la parte inferior del cuerpo.",
+      "nivelDificultad": "Avanzado",
+      "grupoMuscular": "Tren Inferior",
+      "ejercicios": [
+        {
+          "id": "43d5",
+          "nombre": "Peso Muerto"
+        },
+        {
+          "id": "7c05",
+          "nombre": "Sentadilla con Barra"
+        },
+        {
+          "id": "f46c",
+          "nombre": "Estocada con Barra"
+        }
+      ]
+    },
+    {
+      "id": "gf2",
+      "nombre": "Entrenamiento de Fuerza para Pecho y Espalda",
+      "descripcion": "Rutina centrada en incrementar la fuerza en el tren superior.",
+      "nivelDificultad": "Avanzado",
+      "grupoMuscular": "Tren Superior",
+      "ejercicios": [
+        {
+          "id": "1",
+          "nombre": "Press de Banca"
+        },
+        {
+          "id": "c8b4",
+          "nombre": "Remo de 90° Abierto con Mancuerna"
+        },
+        {
+          "id": "414f",
+          "nombre": "Curl de Bicep con Barra"
+        }
+      ]
     }
   ],
   "rutinasGuardadas": [
@@ -244,4 +370,3 @@
     }
   ]
 }
-  
