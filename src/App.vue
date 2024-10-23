@@ -14,7 +14,18 @@ const esAdmin = () => {
 </script>
 
 <template>
-  <RouterView />
+  <body class="principal">
+    <div v-if="esAdmin()" class="admin-view">
+      <NavBarAdmin />
+      <SideBar />
+      <span class="ajustar"><RouterView /></span>
+    </div>
+    <div v-else class="user-view">
+      <NavBar />
+      <RouterView />
+      <Footer />
+    </div>
+  </body>
 </template>
 
 <style scoped>
