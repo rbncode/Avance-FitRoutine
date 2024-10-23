@@ -69,7 +69,7 @@ import { RouterLink } from "vue-router";
   margin: 0;
   border-radius: 4px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  z-index: 1;
+  z-index: 10;
 }
 
 .dropdown-menu li {
