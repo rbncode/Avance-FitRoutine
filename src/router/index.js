@@ -29,6 +29,23 @@ const router = createRouter({
       component: VerRutina,
       props: true,
     },
+
+    {
+      path: "/admin-nueva-rutina",
+      name: "agregar rutina",
+      component: AdminNuevaRutina,
+    },
+    {
+      path: "/admin-editar-rutina/:id",
+      name: "editar rutina",
+      component: AdminEditarRutina,
+      props: true,
+    },
+    {
+      path: "/admin-lista-rutinas",
+      name: "ListaDeRutinas",
+      component: AdminListaRutinas,
+    },
   ],
 });
 
