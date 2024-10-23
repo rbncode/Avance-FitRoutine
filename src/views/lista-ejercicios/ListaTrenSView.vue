@@ -23,7 +23,10 @@ onMounted(cargarEjercicios);
         <!-- Contenido Principal -->
         <section class="main-content">
             <h2>Tren Superior</h2>
-            <p>Ejercicios dirigidos a fortalecer y tonificar los músculos de la parte superior del cuerpo...</p>
+            <p>Ejercicios enfocados en fortalecer y definir los músculos de la parte superior del cuerpo, trabajando
+                grupos musculares como pecho, espalda, hombros, bíceps y tríceps. Incluyen movimientos como press de
+                banca, dominadas, flexiones y remo, esenciales para mejorar la fuerza y estabilidad en el torso y
+                brazos.</p>
 
             <!-- Lista ejercicios -->
             <div class="lista">
