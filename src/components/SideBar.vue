@@ -33,10 +33,11 @@ export default {
 
     <ul class="menu">
       <li>
-        <a v-on:click="goTo('/')" class="enlace"
+        <a v-on:click="goTo('/AdminRegistro')" class="enlace"
           ><i class="bx bx-user-plus"></i>Registro</a
         >
       </li>
+
       <li>
         <a v-on:click="goTo('/AdminListaRutinas')" class="enlace"
           ><i class="bx bxs-calendar-minus"></i>Rutinas</a
@@ -47,8 +48,9 @@ export default {
           ><i class="bx bx-dumbbell"></i>Ejercicios</a
         >
       </li>
+
       <li>
-        <a v-on:click="goTo('/')" class="enlace"
+        <a v-on:click="goTo('/AdminListaUsuarios')" class="enlace"
           ><i class="bx bx-group"></i>Usuarios</a
         >
       </li>
@@ -59,6 +61,12 @@ export default {
       </li>
     </ul>
   </nav>
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/boxicons@latest/css/boxicons.min.css"
+    />
+  </head>
 </template>
 
 <style scoped>

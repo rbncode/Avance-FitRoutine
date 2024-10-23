@@ -1,4 +1,57 @@
 {
+
+  "usuarios": [
+    {
+      "id": "1",
+      "nombre": "pepe",
+      "email": "pepe@gmail.com",
+      "edad": 1,
+      "password": 12345
+    },
+    {
+      "id": "2",
+      "nombre": "juan",
+      "email": "juan@gmail.com",
+      "edad": 16,
+      "password": 23456
+    },
+    {
+      "id": "33",
+      "nombre": "Camilo",
+      "email": "c.rojas22@gmail.com",
+      "edad": 31,
+      "password": 10112
+    },
+    {
+      "id": "4",
+      "nombre": "ignacio",
+      "email": "i.lopez@gmail.com",
+      "edad": 12,
+      "password": 56789
+    },
+    {
+      "id": "5a48",
+      "nombre": "caam",
+      "email": "a.rojas22@ufromail.cl",
+      "edad": 24,
+      "password": "1212"
+    },
+    {
+      "id": "100",
+      "nombre": "Administrador Robin",
+      "email": "robin.01@gmail.com",
+      "edad": 20,
+      "password": "admin123",
+      "rol": "administrador"
+    },
+    {
+      "id": "4499",
+      "nombre": "Camilo",
+      "email": "c.rojas@gmail.com",
+      "edad": 22,
+      "password": "1234"
+    }
+  ],
   "ejercicios": [
     {
       "id": "1",
