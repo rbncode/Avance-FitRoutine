@@ -34,7 +34,9 @@ const guardarRutina = () => {
     <p><strong>Objetivo:</strong> {{ rutina.objetivo }}</p>
     <p>{{ rutina.descripcion }}</p>
 
-    <RouterLink :to="{ name: 'informacion-rutina', params: { id: rutina.id } }"
+    <RouterLink
+      class="see-more"
+      :to="{ name: 'InformaciónRutina', params: { id: rutina.id } }"
       >Ver Más</RouterLink
     >
     <button class="save-routine" v-if="mostrarGuardado" @click="guardarRutina">
@@ -46,14 +48,14 @@ const guardarRutina = () => {
 <style scoped>
 main,
 h1 {
-  color: var(--text-clr);
+  color: #fff;
   align-items: center;
 }
 
 .routine {
-  border: 1px solid var(--line-clr);
+  border: 1px solid #fff;
   background-color: #fff;
-  color: var(--secondary-text-clr);
+  color: #000;
   border-radius: 1em;
   margin-bottom: 20px;
   padding: min(3em, 15%);
@@ -67,5 +69,19 @@ h1 {
   padding: 0 20px;
   flex-grow: 1;
   text-align: center;
+}
+
+.see-more {
+  justify-content: flex-end;
+  border-radius: 10px;
+  background: #0d0e16;
+  color: #fff;
+  width: 105px;
+  height: 40px;
+  border: none;
+  padding: 5px 21px;
+  margin: 5px;
+  flex-shrink: 0;
+  text-decoration: none;
 }
 </style>

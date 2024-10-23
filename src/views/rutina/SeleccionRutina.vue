@@ -70,13 +70,25 @@ onMounted(() => {
 
       <div class="coach-virtual">
         <h3>¿No sabes qué elegir? ¡Pregúntale a nuestro Coach Virtual!</h3>
-        <button @click="goTo" class="consultar-btn">Consultar</button>
+        <RouterLink to="/CoachDatos" class="consultar-btn"
+          >Consultar</RouterLink
+        >
       </div>
     </div>
   </main>
 </template>
 
 <style scoped>
+main {
+  padding: min(30px, 7%);
+  background-color: #0f1017;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  grid-template-areas:
+    "navbar"
+    "main";
+}
+
 .busqueda-container {
   display: flex;
   max-width: 1200px;
