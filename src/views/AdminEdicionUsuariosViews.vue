@@ -38,3 +38,53 @@
     </div>
 </template>
 
+<script>
+import axios from 'axios';
+
+export default {
+    data() {
+        return {
+            usuario: {
+                nombre: '',
+                email: '',
+                edad: null,
+                password: ''
+            }
+        };
+    },
+    methods: {
+        async obtenerUsuario() {
+            const usuarioID = this.$route.params.id; 
+            try {
+                const response = await axios.get(`http://localhost:3000/usuarios/${usuarioID}`);
+                this.usuario = response.data;
+            } catch (error) {
+                console.error(`Error al obtener el usuario: ${error.message}`);
+            }
+        },
+        cancelar() {
+            this.$router.push('/AdminEdicionUsuarios'); 
+        },
+        async guardar() {
+            const usuarioID = this.$route.params.id; 
+            try {
+              
+                await axios.put(`http://localhost:3000/usuarios/${usuarioID}`, this.usuario);
+
+                console.log('Información guardada:', this.usuario);
+                
+            } catch (error) {
+                console.error(`Error al guardar los cambios: ${error.message}`);
+            }
+        }
+    },
+    mounted() {
+        this.obtenerUsuario(); 
+    }
+};
+</script>
+
+
+
+
+
