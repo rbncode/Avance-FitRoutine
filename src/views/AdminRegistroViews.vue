@@ -37,7 +37,7 @@ export default {
             try {
                 const usuarioCreado = await createUsuario(this.nuevoUsuario);
                 console.log('Usuario creado:', usuarioCreado);
-                this.$router.push('/Login')
+                this.$router.push('/AdminListaUsuarios')
             } catch (error) {
                 console.error('Error al crear el usuario:', error.message);
             }
