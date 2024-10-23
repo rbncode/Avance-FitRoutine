@@ -71,6 +71,51 @@
       "pesoRecomendado": 20,
       "grupoMuscular": "Tren Inferior",
       "imagen": "/src/views/lista-ejercicios/img-ejercicios/sentadilla-barra.gif"
+    },
+    {
+      "id": "0b0d",
+      "nombre": "Plancha",
+      "descripcion": "Ejercicio isométrico que fortalece principalmente el core, incluyendo abdominales, lumbares y glúteos.",
+      "instrucciones": "Colócate boca abajo apoyando los antebrazos en el suelo y los pies en puntas.\nAlinea el cuerpo desde la cabeza hasta los pies, manteniendo el torso recto y el abdomen contraído.\nMantén los codos directamente debajo de los hombros y evita arquear la espalda o levantar las caderas.\nMantén esta posición estática durante el tiempo indicado, respirando de manera controlada.",
+      "pesoRecomendado": 0,
+      "grupoMuscular": "Core",
+      "imagen": "/src/views/lista-ejercicios/img-ejercicios/plancha.gif"
+    },
+    {
+      "id": "ef90",
+      "nombre": "Abdominales Bicicleta",
+      "descripcion": "Ejercicio que trabaja los músculos abdominales, con un enfoque en los oblicuos, al realizar un movimiento de torsión y pedaleo.",
+      "instrucciones": "Acuéstate boca arriba con las manos detrás de la cabeza y las piernas extendidas.\nLevanta los hombros del suelo y lleva una rodilla hacia el pecho mientras giras el torso para que el codo opuesto toque la rodilla (rodilla derecha con codo izquierdo y viceversa).\nAlterna las piernas, como si estuvieras pedaleando en una bicicleta, mientras giras el torso hacia el lado opuesto.\nRepite el movimiento de manera fluida y controlada.",
+      "pesoRecomendado": 0,
+      "grupoMuscular": "Core",
+      "imagen": "/src/views/lista-ejercicios/img-ejercicios/bicicleta-algo.gif"
+    },
+    {
+      "id": "5855",
+      "nombre": "Patadas de Tijera",
+      "descripcion": "Ejercicio que trabaja los abdominales inferiores mediante el movimiento alternado de las piernas.",
+      "instrucciones": "Acuéstate boca arriba con las manos debajo de los glúteos o al lado del cuerpo para mayor estabilidad.\nEleva ambas piernas ligeramente del suelo, manteniéndolas rectas.\nAlterna levantando una pierna mientras bajas la otra, realizando un movimiento de \"tijera\" o \"patadas\".\nMantén el core contraído durante todo el ejercicio para evitar que la espalda baja se arquee.\nRepite el movimiento de manera continua y controlada.",
+      "pesoRecomendado": 0,
+      "grupoMuscular": "Core",
+      "imagen": "/src/views/lista-ejercicios/img-ejercicios/mariposa-algo.gif"
+    },
+    {
+      "id": "9e72",
+      "nombre": "Abdominal con Giro",
+      "descripcion": "Ejercicio que fortalece los abdominales y los oblicuos, realizando un movimiento de rotación del torso.",
+      "instrucciones": "Siéntate en el suelo con las rodillas flexionadas y los pies ligeramente elevados o apoyados en el suelo.\nInclina el torso hacia atrás manteniendo la espalda recta y el core activado.\nJunta las manos frente a ti y comienza a girar el torso hacia un lado, llevando las manos hacia el suelo cerca de la cadera.\nRegresa al centro y gira hacia el lado opuesto, repitiendo el movimiento de manera alternada.\nMantén el control y la estabilidad durante todo el ejercicio.",
+      "pesoRecomendado": 0,
+      "grupoMuscular": "Core",
+      "imagen": "/src/views/lista-ejercicios/img-ejercicios/sentadilla-con-giro.gif"
+    },
+    {
+      "id": "d1a8",
+      "nombre": "Sentadilla",
+      "descripcion": "Ejercicio fundamental que fortalece los músculos de las piernas y glúteos, además de mejorar la movilidad y el equilibrio.",
+      "instrucciones": "Párate con los pies a la anchura de los hombros y las puntas de los pies ligeramente hacia afuera.\nMantén el pecho erguido y los brazos extendidos al frente para equilibrio.\nFlexiona las rodillas y caderas, bajando el cuerpo como si te fueras a sentar en una silla.\nDesciende hasta que los muslos estén paralelos al suelo o más abajo, manteniendo la espalda recta.\nEmpuja a través de los talones para regresar a la posición inicial.\nRepite manteniendo una postura controlada y estable.",
+      "pesoRecomendado": 0,
+      "grupoMuscular": "Tren Inferior",
+      "imagen": "/src/views/lista-ejercicios/img-ejercicios/sentadilla-peso-corporal.gif"
     }
   ]
 }
