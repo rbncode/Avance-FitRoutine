@@ -62,6 +62,7 @@ export default {
             try {
                 const usuarioActualizado = await editUsuario(this.usuarioID, this.usuario);
                 console.log('Usuario actualizado:', usuarioActualizado);
+                this.$router.push('/ListaTrenS');
             
             } catch (error) {
                 console.error('Error al guardar los cambios:', error.message);
