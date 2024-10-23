@@ -41,9 +41,9 @@ onMounted(() => {
           <label for="level">Seleccione su nivel:</label>
           <select id="level" name="level" v-model="selectedLevel">
             <option value="" disabled selected hidden>Nivel</option>
-            <option value="easy">Fácil</option>
-            <option value="intermediate">Intermedio</option>
-            <option value="difficult">Difícil</option>
+            <option value="principiante">Principiante</option>
+            <option value="intermedio">Intermedio</option>
+            <option value="avanzado">Avanzado</option>
           </select>
         </div>
 
@@ -55,9 +55,9 @@ onMounted(() => {
             v-model="selectedMuscleGroup"
           >
             <option value="" disabled selected hidden>Sector muscular</option>
-            <option value="t.superior">T. Superior</option>
-            <option value="core">Core</option>
-            <option value="t.inferior">T. Inferior</option>
+            <option value="Tren Superior">T. Superior</option>
+            <option value="Core">Core</option>
+            <option value="Tren Inferior">T. Inferior</option>
           </select>
         </div>
       </div>
