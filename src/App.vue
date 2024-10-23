@@ -29,5 +29,26 @@ const esAdmin = () => {
 </template>
 
 <style scoped>
+.principal{
+  height: 100%;
+}
 
+.user-view {
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr auto;
+}
+
+.admin-view {
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr;
+  background-color: #0D0E16;
+}
+
+.ajustar{
+  margin-top: 60px;
+}
 </style>
