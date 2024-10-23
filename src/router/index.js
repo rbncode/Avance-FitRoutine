@@ -1,5 +1,4 @@
 import { createRouter, createWebHistory } from "vue-router";
-import PrincipalView from "../views/PrincipalView.vue";
 import CoachDatosView from "@/views/coach/CoachDatosView.vue";
 import CoachObjetivoView from "@/views/coach/CoachObjetivoView.vue";
 import CoachResultadoView from "@/views/coach/CoachResultadoView.vue";
