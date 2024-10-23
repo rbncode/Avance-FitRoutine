@@ -47,7 +47,7 @@ export default {
       :key="index"
       class="container-routine"
     >
-      <TarjetaRutina :rutina="rutina" />
+      <TarjetaRutina :rutina="rutina" :esVistaRutinas="true" />
     </div>
   </div>
 </template>

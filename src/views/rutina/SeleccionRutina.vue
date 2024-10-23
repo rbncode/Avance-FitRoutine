@@ -38,7 +38,7 @@ onMounted(() => {
     <div class="busqueda-container">
       <div class="resultados">
         <div v-for="(rutina, index) in filtrarRutinas" :key="index">
-          <TarjetaRutina :rutina="rutina" />
+          <TarjetaRutina :rutina="rutina" :esVistaRutinas="false" />
         </div>
       </div>
 

@@ -1,6 +1,7 @@
 <script setup>
-import { defineProps } from "vue";
-import { useRouter } from "vue-router";
+import { defineProps, ref } from "vue";
+import { useRouter, useRoute } from "vue-router";
+import axios from "axios";
 
 const props = defineProps({
   rutina: {
@@ -10,12 +11,14 @@ const props = defineProps({
 });
 
 const router = useRouter();
+const route = useRoute();
+const mostrarGuardado = ref(true);
 
-const goTo = (page) => {
-  router.push(page);
-};
+const esVistaRutinas = ref(route.name === "rutinas");
 
 const guardarRutina = () => {
+  console.log("Rutina a guardar:", props.rutina);
+
   axios
     .post("http://localhost:3000/rutinaGuardadas", props.rutina)
     .then((response) => {
@@ -23,7 +26,10 @@ const guardarRutina = () => {
       mostrarGuardado.value = false;
     })
     .catch((error) => {
-      console.error("Error al guardar la rutina:", error);
+      console.error(
+        "Error al guardar la rutina:",
+        error.response ? error.response.data : error.message
+      );
     });
 };
 </script>
@@ -34,14 +40,22 @@ const guardarRutina = () => {
     <p><strong>Objetivo:</strong> {{ rutina.objetivo }}</p>
     <p>{{ rutina.descripcion }}</p>
 
-    <RouterLink
-      class="see-more"
-      :to="{ name: 'InformaciónRutina', params: { id: rutina.id } }"
-      >Ver Más</RouterLink
-    >
-    <button class="save-routine" v-if="mostrarGuardado" @click="guardarRutina">
-      Guardar
-    </button>
+    <div class="btn-container">
+      <button class="see-more">
+        <RouterLink
+          class="no-link"
+          :to="{ name: 'InformaciónRutina', params: { id: rutina.id } }"
+          >Ver Más</RouterLink
+        >
+      </button>
+      <button
+        class="save-routine"
+        v-if="mostrarGuardado && !esVistaRutinas"
+        @click="guardarRutina"
+      >
+        Guardar
+      </button>
+    </div>
   </div>
 </template>
 
@@ -52,6 +66,10 @@ h1 {
   align-items: center;
 }
 
+.btn-container {
+  display: flex;
+  gap: 10px;
+}
 .routine {
   border: 1px solid #fff;
   background-color: #fff;
@@ -71,17 +89,38 @@ h1 {
   text-align: center;
 }
 
+.no-link {
+  text-decoration: none;
+  color: white;
+}
+
 .see-more {
-  justify-content: flex-end;
-  border-radius: 10px;
-  background: #0d0e16;
-  color: #fff;
+  display: flex;
   width: 105px;
   height: 40px;
-  border: none;
   padding: 5px 21px;
-  margin: 5px;
-  flex-shrink: 0;
-  text-decoration: none;
+  justify-content: center;
+  align-items: center;
+  background: #0d0e16;
+  border: none;
+  color: #fff;
+  font-weight: 400;
+  gap: 10px;
+  border-radius: 10px;
+}
+
+.save-routine {
+  display: flex;
+  width: 105px;
+  height: 40px;
+  padding: 5px 21px;
+  justify-content: center;
+  align-items: center;
+  background: #ad283d;
+  border: none;
+  color: #fff;
+  font-weight: 400;
+  gap: 10px;
+  border-radius: 10px;
 }
 </style>
