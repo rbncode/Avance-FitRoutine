@@ -19,7 +19,7 @@ export default {
       axios
         .get(`http://localhost:3000/rutinas/${this.id}`)
         .then((response) => {
-          this.routine = response.data;
+          this.rutina = response.data;
         })
         .catch((error) => {
           console.error(error);

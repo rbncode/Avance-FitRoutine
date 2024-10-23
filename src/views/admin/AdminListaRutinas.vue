@@ -20,7 +20,7 @@ export default {
 
     // Método para redirigir a la página de edición de rutina
     const editarRutina = (id) => {
-      router.push(`/admin-editar-rutina/${id}`);
+      router.push(`/AdminEditarRutina/${id}`);
     };
 
     // Método para eliminar una rutina
@@ -75,7 +75,7 @@ export default {
           </tbody>
         </table>
       </div>
-      <button @click="goTo('/admin-nueva-rutina')" class="edit-btn">
+      <button @click="goTo('/AdminNuevaRutina')" class="edit-btn">
         Agregar Rutina
       </button>
     </div>
