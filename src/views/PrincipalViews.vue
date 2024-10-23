@@ -33,3 +33,91 @@
 import EjerciciosComponente from '@/components/EjerciciosComponente.vue';
 </script>
 
+<style scoped>
+.hero {
+    position: relative;
+    background: url('../views/img//fitrutine-principal.png') no-repeat center center/cover;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: 1;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+}
+
+.hero-text h1 {
+    font-size: 48px;
+    color: white;
+    font-size: 48px;
+    z-index: 2;
+}
+
+.hero-text .line1 {
+    display: block;
+    font-size: 48px;
+}
+
+.hero-text .line2 {
+    display: block;
+    font-size: 48px;
+}
+
+.btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #ff3b3b;
+    color: white;
+    border: none;
+    border-radius: 19px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.mission {
+    background-color: #1e1e1e;
+    padding: 20px 20px 40px;
+}
+
+.mission-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+
+}
+
+.mission-img {
+    width: 50%;
+    border-radius: 10px;
+    max-height: 300px;
+    object-fit: cover;
+}
+
+.mission-text {
+    width: 55%;
+    color: white;
+    padding-left: 20px;
+}
+
+.mission-text h2 {
+    font-size: 32px;
+    margin: 0 0 20px 20px;
+
+}
+
+.mission-text p {
+    margin-bottom: 10px;
+}
+</style>
