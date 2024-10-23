@@ -48,11 +48,25 @@ onMounted(cargarEjercicio);
                     </ul>
                 </div>
                 <div class="peso-recomendado">
-                    <h3 class="peso-mensaje">Peso recomendado: {{ ejercicio.pesoRecomendado }} Kg</h3>
-                    <ul>
+                    <h3 class="peso-mensaje" v-if="ejercicio.pesoRecomendado !== 0">
+                        Peso recomendado: {{ ejercicio.pesoRecomendado }} Kg
+                    </h3>
+                    <h3 class="peso-mensaje" v-else>
+                        Peso recomendado: Peso Corporal
+                    </h3>
+                    <!-- Si el peso recomendado es distinto de 0 -->
+                    <ul v-if="ejercicio.pesoRecomendado !== 0">
                         <li>Este peso es el recomendado para poder familiarizarte con la ejecución del ejercicio.</li>
                         <li>Una vez logres sentirte cómodo realizando el ejercicio, puedes sumar más peso, añadir más
                             repeticiones o series para progresar tu desarrollo físico.</li>
+                    </ul>
+
+                    <!-- Si el peso recomendado es 0 -->
+                    <ul v-else>
+                        <li>En este ejercicio se usa tu propio peso corporal para realizarlo.</li>
+                        <li>Una vez logres sentirte cómodo realizando el ejercicio, puedes probar variantes del
+                            ejercicio más exigentes, añadir más repeticiones o series para progresar tu desarrollo
+                            físico.</li>
                     </ul>
                 </div>
             </div>
