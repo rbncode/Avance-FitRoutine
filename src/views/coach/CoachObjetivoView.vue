@@ -22,7 +22,7 @@ import BotonRojo from '@/components/BotonRojo.vue';
                     <h3>Ganar masa muscular</h3>
                     <p>Descubre el poder de esculpir tu cuerpo con una rutina que tonifica cada músculo y maximizando
                         definición.</p>
-                    <img src="../coach/img-coach/bascula.png" alt="bascula.png">
+                    <img src="../coach/img-coach/musculo.png" alt="musculo.png">
                 </div>
 
                 <!-- Bajar de Peso -->
@@ -30,7 +30,7 @@ import BotonRojo from '@/components/BotonRojo.vue';
                     <h3>Bajar de Peso</h3>
                     <p>Libérate de esos kilos extra con una rutina enfocada en quemar grasa y mejorar tu resistencia,
                         transformando tu energía y salud de manera efectiva.</p>
-                    <img src="../coach/img-coach/musculo.png" alt="musculo.png">
+                    <img src="../coach/img-coach/bascula.png" alt="bascula.png">
                 </div>
 
                 <!-- Ganar Fuerza -->
