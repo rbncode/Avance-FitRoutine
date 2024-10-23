@@ -9,7 +9,7 @@ import { RouterLink } from "vue-router";
     </div>
     <ul class="nav-links">
       <li><RouterLink to="/">Inicio</RouterLink></li>
-      <li><RouterLink to="/">Perfil</RouterLink></li>
+      <li><RouterLink to="/PerfilUsuario">Perfil</RouterLink></li>
       <li><RouterLink to="/Rutinas">Rutinas</RouterLink></li>
       <li class="dropdown">
         <a href="#" class="dropdown-toggle">Ejercicios</a>
